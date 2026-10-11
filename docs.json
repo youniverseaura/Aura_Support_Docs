@@ -209,5 +209,8 @@
       "source": "/",
       "destination": "/welcome"
     }
-  ]
+  ],
+  "fonts": {
+    "family": "Outfit"
+  }
 }
