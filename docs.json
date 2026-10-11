@@ -19,13 +19,16 @@
             "pages": [
               "welcome",
               "home/get-started",
-              "get-started/first-steps"
+              "get-started/first-steps",
+              "home/workspace"
             ]
           },
           {
             "group": "Core concepts",
             "icon": "compass",
             "pages": [
+              "home/chats-and-projects",
+              "home/integrations",
               "get-started/about"
             ]
           }
@@ -38,13 +41,17 @@
             "group": "Chat",
             "icon": "messages-square",
             "pages": [
-              "chat/modes"
+              "chat/overview",
+              "chat/modes",
+              "chat/prompting",
+              "chat/live-search"
             ]
           },
           {
             "group": "Add context",
             "icon": "paperclip",
             "pages": [
+              "chat/files",
               "chat/projects"
             ]
           },
@@ -53,6 +60,7 @@
             "icon": "briefcase",
             "pages": [
               "chat/work-mode",
+              "chat/browser-tool",
               "chat/voice"
             ]
           }
@@ -65,23 +73,38 @@
             "group": "Start building",
             "icon": "hammer",
             "pages": [
-              "build/ai-app-builder"
+              "build/ai-app-builder",
+              "builder/first-app",
+              "builder/games"
             ]
           },
           {
             "group": "Ship your app",
             "icon": "rocket",
-            "pages": []
+            "pages": [
+              "builder/publish",
+              "builder/domains",
+              "builder/mail"
+            ]
           },
           {
             "group": "Configure",
             "icon": "settings",
-            "pages": []
+            "pages": [
+              "builder/setup-keys",
+              "builder/mcp",
+              "builder/data-history",
+              "builder/collaboration"
+            ]
           },
           {
             "group": "Quality",
             "icon": "shield-check",
-            "pages": []
+            "pages": [
+              "builder/skills",
+              "builder/scans",
+              "builder/seo"
+            ]
           }
         ]
       },
