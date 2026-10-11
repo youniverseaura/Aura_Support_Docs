@@ -193,9 +193,8 @@
     "options": [
       "copy",
       "view",
-      "chatgpt",
-      "claude",
-      "perplexity"
+      "download-pdf",
+      "assistant"
     ]
   },
   "footer": {
