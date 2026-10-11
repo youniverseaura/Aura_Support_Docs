@@ -9,42 +9,127 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "groups": [
+    "tabs": [
       {
-        "group": "Get started",
-        "icon": "rocket",
-        "pages": [
-          "welcome",
-          "get-started/first-steps",
-          "get-started/about"
+        "tab": "Home",
+        "groups": [
+          {
+            "group": "Get started",
+            "icon": "rocket",
+            "pages": [
+              "welcome",
+              "home/get-started",
+              "get-started/first-steps"
+            ]
+          },
+          {
+            "group": "Core concepts",
+            "icon": "compass",
+            "pages": [
+              "get-started/about"
+            ]
+          }
         ]
       },
       {
-        "group": "Chat with Aura",
-        "icon": "messages-square",
-        "pages": [
-          "chat/modes",
-          "chat/work-mode",
-          "chat/voice",
-          "chat/projects"
+        "tab": "Chat",
+        "groups": [
+          {
+            "group": "Chat",
+            "icon": "messages-square",
+            "pages": [
+              "chat/modes"
+            ]
+          },
+          {
+            "group": "Add context",
+            "icon": "paperclip",
+            "pages": [
+              "chat/projects"
+            ]
+          },
+          {
+            "group": "Act and speak",
+            "icon": "briefcase",
+            "pages": [
+              "chat/work-mode",
+              "chat/voice"
+            ]
+          }
         ]
       },
       {
-        "group": "Build and create",
-        "icon": "hammer",
-        "pages": [
-          "build/agents",
-          "build/ai-app-builder",
-          "build/ai-studio"
+        "tab": "AI Builder",
+        "groups": [
+          {
+            "group": "Start building",
+            "icon": "hammer",
+            "pages": [
+              "build/ai-app-builder"
+            ]
+          },
+          {
+            "group": "Ship your app",
+            "icon": "rocket",
+            "pages": []
+          },
+          {
+            "group": "Configure",
+            "icon": "settings",
+            "pages": []
+          },
+          {
+            "group": "Quality",
+            "icon": "shield-check",
+            "pages": []
+          }
         ]
       },
       {
-        "group": "Account, privacy & billing",
-        "icon": "shield-check",
-        "pages": [
-          "account/privacy",
-          "account/plans",
-          "account/support"
+        "tab": "Create",
+        "groups": [
+          {
+            "group": "Create",
+            "icon": "palette",
+            "pages": [
+              "build/ai-studio",
+              "build/agents"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Use cases",
+        "groups": [
+          {
+            "group": "Use cases",
+            "icon": "lightbulb",
+            "pages": []
+          }
+        ]
+      },
+      {
+        "tab": "Learn",
+        "groups": [
+          {
+            "group": "Foundations",
+            "icon": "graduation-cap",
+            "pages": []
+          }
+        ]
+      },
+      {
+        "tab": "Trust & billing",
+        "groups": [
+          {
+            "group": "Trust & billing",
+            "icon": "shield-check",
+            "pages": [
+              "account/plans",
+              "account/privacy",
+              "account/support"
+            ]
+          }
         ]
       }
     ]
