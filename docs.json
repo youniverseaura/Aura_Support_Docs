@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "luma",
   "name": "Aura Help Center",
   "colors": {
     "primary": "#0EA5E9",
