@@ -61,7 +61,8 @@
             "pages": [
               "chat/work-mode",
               "chat/browser-tool",
-              "chat/voice"
+              "chat/voice",
+              "chat/tool-router"
             ]
           }
         ]
