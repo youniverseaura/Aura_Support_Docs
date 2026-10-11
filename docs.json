@@ -8,8 +8,8 @@
     "dark": "#0284C7"
   },
   "favicon": {
-    "light": "/images/logowhite.png",
-    "dark": "/images/logowhite.png"
+    "light": "/images/logotransparent.png",
+    "dark": "/images/logotransparent.png"
   },
   "navigation": {
     "tabs": [
@@ -173,8 +173,8 @@
     ]
   },
   "logo": {
-    "light": "/images/logowhite.png",
-    "dark": "/images/logowhite.png"
+    "light": "/images/logotransparent.png",
+    "dark": "/images/logotransparent.png"
   },
   "navbar": {
     "links": [
