@@ -1,37 +1,53 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Aura Help Center",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#0EA5E9",
+    "light": "#38BDF8",
+    "dark": "#0284C7"
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
+    "groups": [
       {
-        "group": "Getting Started",
+        "group": "Get started",
+        "icon": "rocket",
         "pages": [
-          "index",
-          "quickstart"
+          "welcome",
+          "get-started/first-steps",
+          "get-started/about"
+        ]
+      },
+      {
+        "group": "Chat with Aura",
+        "icon": "messages-square",
+        "pages": [
+          "chat/modes",
+          "chat/work-mode",
+          "chat/voice",
+          "chat/projects"
+        ]
+      },
+      {
+        "group": "Build and create",
+        "icon": "hammer",
+        "pages": [
+          "build/agents",
+          "build/ai-app-builder",
+          "build/ai-studio"
+        ]
+      },
+      {
+        "group": "Account, privacy & billing",
+        "icon": "shield-check",
+        "pages": [
+          "account/privacy",
+          "account/plans",
+          "account/support"
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
@@ -41,13 +57,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:support@mintlify.com"
+        "href": "mailto:support@youniverse.ai"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Open Aura",
+      "href": "https://aura.youniverse.ai"
     }
   },
   "contextual": {
@@ -56,17 +72,19 @@
       "view",
       "chatgpt",
       "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
+      "perplexity"
     ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "website": "https://youniverse.ai"
     }
-  }
+  },
+  "description": "Guides and support for Aura by Youniverse.AI — chat modes, Work Mode, voice, Agents, AI App Builder, AI Studio, privacy and billing.",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/welcome"
+    }
+  ]
 }
