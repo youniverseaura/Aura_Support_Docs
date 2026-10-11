@@ -127,7 +127,14 @@
           {
             "group": "Use cases",
             "icon": "lightbulb",
-            "pages": []
+            "pages": [
+              "use-cases/overview",
+              "use-cases/inbox-triage",
+              "use-cases/weekly-report",
+              "use-cases/competitor-watch",
+              "use-cases/meeting-prep",
+              "use-cases/online-store"
+            ]
           }
         ]
       },
@@ -137,7 +144,10 @@
           {
             "group": "Foundations",
             "icon": "graduation-cap",
-            "pages": []
+            "pages": [
+              "learn/how-orchestration-works",
+              "learn/what-is-an-app"
+            ]
           }
         ]
       },
@@ -150,6 +160,7 @@
             "pages": [
               "account/plans",
               "account/privacy",
+              "account/security",
               "account/support"
             ]
           }
