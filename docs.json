@@ -211,5 +211,8 @@
   ],
   "fonts": {
     "family": "Outfit"
+  },
+  "search": {
+    "prompt": "Questions? Ask Aura Support"
   }
 }
