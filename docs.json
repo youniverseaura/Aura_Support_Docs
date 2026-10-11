@@ -5,7 +5,7 @@
   "colors": {
     "primary": "#DB3D1A",
     "light": "#38BDF8",
-    "dark": "#0284C7"
+    "dark": "#DB3D1A"
   },
   "favicon": {
     "light": "/images/logotransparent.png",
@@ -209,9 +209,6 @@
       "destination": "/welcome"
     }
   ],
-  "fonts": {
-    "family": "Outfit"
-  },
   "search": {
     "prompt": "Questions? Ask Aura Support"
   }
