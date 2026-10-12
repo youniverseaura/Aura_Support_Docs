@@ -1,0 +1,49 @@
+---
+title: "Trust, approvals and spending"
+sidebarTitle: "Trust and spending"
+description: "Control what an Agent may do on its own and how much it may spend."
+icon: "shield-check"
+---
+
+<Frame>
+  <img src="https://chat.youniverse.ai/__l5e/assets-v1/18cc2232-08f8-47ee-83df-b0ae4d7c4f6d/docs-agents-trust.jpg" alt="Three trust dials and a wallet with a budget gauge" />
+</Frame>
+
+Tap the **pencil** on an Agent to change its purpose, permissions and spending limits.
+
+## Trust levels
+
+| Level | Behavior |
+| --- | --- |
+| **Look only** | Can read and report. Never changes anything. |
+| **Ask me first** | Checks with you before it sends, buys or submits. |
+| **Full trust** | Acts on its own inside its budget. |
+
+## The approval floor
+
+Even on **Full trust**, an Agent still asks before **spending money, deleting, or anything it can't undo**. Approval requests appear in the Agent's chat and your Inbox with Approve and Deny buttons.
+
+**Never ask me to approve** (Full trust only) removes that floor: when it's on, the Agent just does it. Test runs always keep approvals, even with this on.
+
+<Frame>
+  <img src="https://cdn.youniverse.ai/blog-hero/docs/approval.jpg" alt="Glass approval and pause buttons beside a task card" />
+</Frame>
+
+## Spending limits
+
+- **Per month** and **Per run** limits, in dollars. Leave blank for no limit.
+- The card shows how much the Agent has spent this month.
+- When a limit would be crossed, the Agent stops and asks instead.
+
+<Tip>
+Start new Agents on **Ask me first** with a small per-run limit. Raise trust once you've seen a few good runs.
+</Tip>
+
+<AccordionGroup>
+  <Accordion title="Who stopped my Agent?">
+    The details page shows when it was paused or stopped and whether it was you or Aura (for example after repeated sign-in failures).
+  </Accordion>
+  <Accordion title="Can an Agent bypass approvals by rewording an action?">
+    No. Risky actions are classified by the system, not by the Agent's own description.
+  </Accordion>
+</AccordionGroup>

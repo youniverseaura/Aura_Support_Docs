@@ -1,0 +1,42 @@
+---
+title: "Memory and playbooks"
+sidebarTitle: "Memory and playbooks"
+description: "How Agents learn between runs and how to reuse or share what they learned."
+icon: "brain"
+---
+
+<Frame>
+  <img src="https://chat.youniverse.ai/__l5e/assets-v1/593abab1-0bd7-40ef-9f88-0915eee8d91d/docs-agents-memory.jpg" alt="Notebook and a playbook card passed between robots" />
+</Frame>
+
+Agents get better every run. The **Memory** tab shows everything an Agent remembers.
+
+## What it remembers
+
+| Section | Contents |
+| --- | --- |
+| **What this Agent remembers** | Instructions you gave it, like "cap spending at $200". Tell it in chat and it keeps it here. |
+| **How it did this last time** | After a successful run it saves the approach that worked, so the next run is faster and cheaper. |
+| **API notes** | Details it looked up about services, kept tidy so it doesn't search again. |
+
+You can review and delete any memory.
+
+## After every run
+
+On the details page, **After every run** lets you add rules that run each time a real run finishes — for example "post a summary in Slack" or "update the tracker sheet". Previews and tests don't count.
+
+<Frame>
+  <img src="https://chat.youniverse.ai/__l5e/assets-v1/921e3baf-87cf-4795-8d9d-a991978fd5f1/docs-agents-create.jpg" alt="Glass robot typing a job" />
+</Frame>
+
+## Playbooks
+
+A playbook packages what an Agent has learned so it can be reused.
+
+- **Start a new Agent from this one** — clone the job and its learned approach.
+- **Share playbook** — get a link others can import.
+- **Paste a playbook link to import it** — then tap **Check** to preview before creating.
+
+<Note>
+Passwords, vault items and memories are never copied into a playbook.
+</Note>

@@ -1,0 +1,52 @@
+---
+title: "Vault and logins"
+sidebarTitle: "Vault and logins"
+description: "Give Agents passwords and keys they can use but never see."
+icon: "lock"
+---
+
+<Frame>
+  <img src="https://chat.youniverse.ai/__l5e/assets-v1/dc33402c-be69-4466-b08a-20e53830221e/docs-agents-vault.jpg" alt="Glass safe opened by a robot hand without seeing inside" />
+</Frame>
+
+The **Vault** stores logins and keys locked. The Agent can use them, but **never reads them and never repeats them back**.
+
+## What you can save
+
+| Type | Use it for |
+| --- | --- |
+| **Login** | Website, username or email, password, optional notes ("use this account only for job applications") |
+| **Key** | An API key or token for a service |
+| **Key pair** | A public and private key or ID + secret |
+| **Note** | Any private text the Agent should be able to use |
+
+## How secrets stay secret
+
+- Each item is encrypted with your own key.
+- The AI only sees the item's **name and type**, and inserts a placeholder. The real value is filled in at the last moment, outside the model.
+- Decrypted values are never written to run history or logs.
+
+<Frame>
+  <img src="https://chat.youniverse.ai/__l5e/assets-v1/6499287a-264b-4354-b69f-46c584cbd75b/docs-agents-browser.jpg" alt="Glass browser window with replay and folders" />
+</Frame>
+
+## Shared or private
+
+The Vault works like one shared computer: items are available to **all your Agents** unless you mark them **This agent only**. You can also pick exactly which other Agents may use a private item.
+
+## Save a live login
+
+If you sign in yourself while watching an Agent's browser, tap **Save it to Vault** so the Agent can sign in on its own next time.
+
+## When an Agent needs a credential
+
+It shows a compact card listing the credential types it needs, with vendor setup steps tucked under **Technical details**.
+
+<AccordionGroup>
+  <Accordion title="Can I view a saved password?">
+    Yes, you can reveal your own items with the eye icon. Agents cannot.
+  </Accordion>
+  <Accordion title="Are vault items copied when I share a playbook?">
+    Never. Passwords, vault items and memories are never copied.
+  </Accordion>
+</AccordionGroup>

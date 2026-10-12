@@ -141,7 +141,23 @@
       {
         "tab": "Aura Agents",
         "pages": [
-          "build/agents"
+          "build/agents",
+          {
+            "group": "Features",
+            "icon": "bot",
+            "pages": [
+              "agents/create",
+              "agents/triggers",
+              "agents/trust",
+              "agents/vault",
+              "agents/servers",
+              "agents/memory",
+              "agents/history-files-browser",
+              "agents/alerts",
+              "agents/teams",
+              "agents/watchers"
+            ]
+          }
         ]
       },
       {

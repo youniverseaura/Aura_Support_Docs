@@ -1,0 +1,75 @@
+---
+title: "Create and manage Agents"
+sidebarTitle: "Create and manage"
+description: "Start an Agent, edit it, run it, test it, pause or stop it."
+icon: "sparkles"
+---
+
+<Frame>
+  <img src="https://chat.youniverse.ai/__l5e/assets-v1/921e3baf-87cf-4795-8d9d-a991978fd5f1/docs-agents-create.jpg" alt="Glass robot typing a job description" />
+</Frame>
+
+An **Aura Agent** is a teammate that works in the cloud while you don't. You describe the job in plain words; the Agent figures out the steps, the tools and the apps it needs each time it runs.
+
+## Three ways to start one
+
+<CardGroup cols={3}>
+  <Card title="From Agents" icon="plus">Open **Agents** in the menu and choose **New Agent**, or tap one of the suggested ideas based on your connected apps.</Card>
+  <Card title="From any chat" icon="message-square">Ask for something recurring ("every Monday…"). Aura offers **Start an Agent for this?** and opens it prefilled.</Card>
+  <Card title="From a playbook" icon="book-open">Paste a shared playbook link, or **Start a new Agent from this one**.</Card>
+</CardGroup>
+
+## Write a good job description
+
+- **What** to do and **when** ("every weekday at 8 AM").
+- **Where** to look and where to put results ("my Gmail inbox", "the Sales sheet").
+- **Rules** ("never email customers directly", "cap spending at $50").
+- **How to report** ("send me a two-line summary").
+
+See the [Prompt guide](/learn/prompt-guide) for templates.
+
+## The Agent details page
+
+| Area | What it shows |
+| --- | --- |
+| **Header** | Name, short handle (e.g. AG-7K3P), trust level and status |
+| **Last run** | When it last ran and its next scheduled run |
+| **After every run** | Rules to follow each time a real run finishes (tests don't count) |
+| **Playbook** | Reuse or share what the Agent learned — see [Memory and playbooks](/agents/memory) |
+| **Tabs** | Workflow, Memory, History, Files, Vault, Triggers, Alerts, Browser |
+
+<Frame>
+  <img src="https://cdn.youniverse.ai/blog-hero/docs/agents.jpg" alt="Glass robot with a clipboard beside a calendar" />
+</Frame>
+
+## Run, test, pause, stop
+
+- **Run now** — starts a real run immediately.
+- **Test** — a safe rehearsal. Tests never skip approvals and don't trigger "after every run" rules.
+- **Pause** (yellow) — stops new runs but keeps pending questions waiting for you.
+- **Stop** (red) — switches the Agent off until you **Reactivate** it.
+- A pulsing green dot means it's working right now.
+
+## Adaptive workflow
+
+The **Workflow** tab says *Adaptive workflow — the exact actions can change each run*. Agents don't follow a frozen step list: they choose tools at run time, so they keep working when an app or page changes. What worked last time is saved as a recipe to make the next run faster.
+
+## Talk to your Agent
+
+Every Agent has its own chat. Message it mid-run ("skip the weekend emails") and it will adjust and remember the instruction. It asks you questions there when it needs something.
+
+## Reliability built in
+
+- Long jobs keep going past time limits automatically.
+- If a run stalls for five minutes it's diagnosed and retried once; a second stall stops it and alerts you.
+- Schedules use your own time zone.
+- Real-world actions are never repeated when a run resumes.
+
+<AccordionGroup>
+  <Accordion title="Which plans include Agents?">
+    Pro and Elite.
+  </Accordion>
+  <Accordion title="What does an Agent cost to run?">
+    Runs use credits based on the AI work and tools used. You can set spending limits per month and per run — see [Trust and spending](/agents/trust).
+  </Accordion>
+</AccordionGroup>

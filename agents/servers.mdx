@@ -1,0 +1,54 @@
+---
+title: "Connected servers and apps"
+sidebarTitle: "Connected servers"
+description: "Official MCP connections and your connected apps."
+icon: "plug"
+---
+
+<Frame>
+  <img src="https://chat.youniverse.ai/__l5e/assets-v1/0d1d587f-5746-436f-9594-1950f503bbe1/docs-agents-servers.jpg" alt="Glass hub connected to service tiles" />
+</Frame>
+
+Agents can act through two kinds of connections:
+
+- **Connected servers (MCP)** — official connections published by services themselves. Agents use these **first** when they cover the job.
+- **Connected apps** — the same apps you use in Work Mode (Gmail, Google Drive, Slack, HubSpot and many more), for everything else.
+
+## Add a server
+
+<Steps>
+  <Step title="Tap Connect">
+    In the **Vault** tab under Connected servers.
+  </Step>
+  <Step title="Paste the server address">
+    Use the address the service gives you.
+  </Step>
+  <Step title="Sign in">
+    Approve on the service's own sign-in page, or pick an API key you saved in the Vault (some services only allow keys).
+  </Step>
+  <Step title="Verified">
+    Aura checks the server really works — including a real read — before marking it **Connected**.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="https://chat.youniverse.ai/__l5e/assets-v1/dc33402c-be69-4466-b08a-20e53830221e/docs-agents-vault.jpg" alt="Glass safe with keys" />
+</Frame>
+
+## Aura-managed servers
+
+Some knowledge servers (such as **DeepWiki** and **Cloudflare Docs**) are marked **Aura managed**. They're always on and give Agents up-to-date technical documentation at no setup cost.
+
+## Health checks
+
+Connections are checked at the start of every run. If a server refuses the Agent's sign-in, the Agent pauses and tells you to reconnect instead of failing silently.
+
+## Safety
+
+Any server action that isn't read-only is treated as risky and follows your [trust and approval](/agents/trust) settings.
+
+<AccordionGroup>
+  <Accordion title="Are servers shared between Agents?">
+    Yes, unless you limit a server to specific Agents.
+  </Accordion>
+</AccordionGroup>

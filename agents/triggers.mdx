@@ -1,0 +1,46 @@
+---
+title: "Triggers and schedules"
+sidebarTitle: "Triggers and schedules"
+description: "Every way an Agent can start: on demand, on a schedule, from chat, app events, web addresses and quiet check-ins."
+icon: "clock"
+---
+
+<Frame>
+  <img src="https://chat.youniverse.ai/__l5e/assets-v1/80d52726-8b54-4a38-aad6-856ebf38dee2/docs-agents-triggers.jpg" alt="Glass clock, calendar, lightning bolt and link around a start button" />
+</Frame>
+
+Open the **Triggers** tab to choose what starts your Agent. Turn on as many as you like.
+
+| Trigger | What it does |
+| --- | --- |
+| **When you press run** | Always available. Starts a run from Run now. |
+| **On a schedule** | Runs by itself at the times you pick — every few minutes, daily, weekdays, monthly. Read in your own time zone. |
+| **From a chat** | You or Aura can hand it a job mid-conversation. |
+| **When a connected app does something** | New email, new order, new row — the app tells the Agent instantly. |
+| **From a web address** | Gives the Agent a private link. Anything that can send a request (a form, Zapier, your own app) can start it. |
+| **Quiet check-ins between runs** | Takes a short look on its own and only speaks up or acts if something's worth it. Check-ins slow down when nothing happens and speed back up when something does. |
+
+<Frame>
+  <img src="https://chat.youniverse.ai/__l5e/assets-v1/d3310627-e7ea-43d1-a267-ced5722504a4/docs-agents-alerts.jpg" alt="Events filtered before reaching the Agent" />
+</Frame>
+
+## Booked one-time runs
+
+Ask "remind me at 3:15 PM to check the shipment" or "run this tomorrow at 9" and the Agent books an exact-time run. You'll see it under **Booked one-time runs** in Triggers.
+
+## Incoming webhooks
+
+The **Incoming webhooks** panel shows what can send events to the Agent and everything it has received, so you can confirm deliveries.
+
+## What happens if it's busy?
+
+An Agent never runs twice at once. If a scheduled time arrives while it's still working, that tick is queued and runs once it finishes — nothing is skipped silently and nothing overlaps.
+
+<AccordionGroup>
+  <Accordion title="Can it run every minute?">
+    Yes, schedules can be as frequent as every minute. Frequent runs use more credits.
+  </Accordion>
+  <Accordion title="Can I change the schedule from chat?">
+    Yes: "run this at 7 AM instead". The Agent only changes timing when you mention timing.
+  </Accordion>
+</AccordionGroup>
