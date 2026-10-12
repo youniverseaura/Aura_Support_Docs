@@ -62,7 +62,7 @@
           },
           {
             "group": "Voice",
-            "icon": "briefcase",
+            "icon": "mic",
             "pages": [
               "chat/voice"
             ]
