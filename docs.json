@@ -74,6 +74,21 @@
         ]
       },
       {
+        "tab": "Work Mode",
+        "groups": [
+          {
+            "group": "Start working",
+            "icon": "briefcase",
+            "pages": []
+          },
+          {
+            "group": "Apps and execution",
+            "icon": "route",
+            "pages": []
+          }
+        ]
+      },
+      {
         "tab": "AI Builder",
         "groups": [
           {
