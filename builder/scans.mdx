@@ -1,7 +1,7 @@
 ---
-title: "Security and performance scans"
-sidebarTitle: "Scans"
-description: "Automatic checks that keep your app safe and fast."
+title: "Security scans"
+sidebarTitle: "Security scans"
+description: "Three AI reviewers and a learning rule engine guard your app."
 icon: "shield-check"
 ---
 
@@ -9,38 +9,44 @@ icon: "shield-check"
   <img src="https://cdn.youniverse.ai/blog-hero/docs/security.jpg" alt="Glass shield protecting an app window" />
 </Frame>
 
-## Security
+The **Security** tab lists findings by severity — Critical, High, Medium, Low, Info — with a risk score and an open-issue count.
 
-The **Security** tab lists findings by severity — Critical, High, Medium, Low, Info — with a risk score. Three independent AI reviewers check the same code alongside a rule engine that learns over time.
+## How it checks
 
-## Performance
+- **Three independent AI reviewers** — GPT-6 Luna, Gemini 3.8 Flash and Claude Haiku — audit and cross-examine the same code.
+- **A rule engine that learns** — curated rules, rules it writes itself, rules on trial, and its own precision tracking.
+- **Live threat intel** — new attack patterns are pulled in as they appear.
+
+Each finding is labelled **Rule**, **AI** or **Rule + AI**. Unused starter code is deliberately not flagged, so you only see real risks.
+
+## Safe dependency upgrades
+
+When a library needs updating, Aura checks compatibility, picks the lowest safe stable version, runs a real production build to verify it, and rolls back automatically if anything fails.
 
 <Frame>
   <img src="https://cdn.youniverse.ai/blog-hero/docs/performance.jpg" alt="Glass speedometer in the fast zone" />
 </Frame>
 
-The **Performance** tab finds slow pages, bloat, stale code and things that might break.
-
 ## What it costs
 
 | | Cost |
 | --- | --- |
-| Scheduled and after-build scans | Free |
+| Automatic security scans | Free |
 | Scans you start by hand | Credits |
 | Applying a fix | A build run (one critical security fix a day is free) |
 
-For a guided fix plan, run [`/code-review`](/builder/skills).
+Fixes pause while your app is publishing. When Security and [Performance](/builder/performance) both have open items, **Fix all together** sends them as one cheaper build.
 
 ## Common questions
 
 <AccordionGroup>
-  <Accordion title="Are scans free?">
-    Scheduled and after-build scans are free. Scans you start by hand use credits.
+  <Accordion title="Are security scans free?">
+    Automatic scans are free. Scans you start by hand use credits.
   </Accordion>
   <Accordion title="Is fixing free?">
     Applying a fix is a build run, but one critical security fix a day is free.
   </Accordion>
-  <Accordion title="How do I get a fix plan?">
-    Run /code-review. It starts from your latest scan findings.
+  <Accordion title="Can an upgrade break my app?">
+    Every upgrade is verified with a real build and rolled back automatically if it fails.
   </Accordion>
 </AccordionGroup>
