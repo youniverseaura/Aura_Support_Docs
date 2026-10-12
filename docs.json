@@ -76,7 +76,8 @@
             "icon": "briefcase",
             "pages": [
               "chat/work-mode",
-              "chat/tool-router"
+              "chat/tool-router",
+              "work-mode/privacy-and-credits"
             ]
           },
           {
@@ -84,6 +85,7 @@
             "icon": "route",
             "pages": [
               "home/integrations",
+              "work-mode/tasks-and-results",
               "chat/browser-tool"
             ]
           },

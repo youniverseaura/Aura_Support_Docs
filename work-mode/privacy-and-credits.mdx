@@ -1,0 +1,67 @@
+---
+title: "Privacy, access and credits"
+description: "Understand Work Mode's ZDR setting, connected-account permissions and usage costs."
+icon: "shield-check"
+---
+
+<Frame><img src="https://cdn.youniverse.ai/blog-hero/docs/work-mode.jpg" alt="Glass workspace linking documents and connected accounts" /></Frame>
+
+Work Mode crosses several boundaries: Aura's conversation, the AI provider, your connected apps and, when enabled, a website browser. Each has a different role. Zero Data Retention for model calls is not a promise that a document you save in Google Drive will disappear.
+
+## Check the ZDR setting
+
+In a Work Mode conversation, open the composer's **+** menu and inspect **Zero Data Retention**. When the faster non-ZDR route is active, the menu offers **Turn on ZDR**.
+
+| Setting | What it means |
+| --- | --- |
+| ZDR on | Work Mode routes through Google Vertex with Zero Data Retention for the model request. |
+| ZDR off / Fast Route on | Work Mode uses Gemini 3.8 Flash through Google AI Studio. This route is **not Zero Data Retention**; the provider may retain prompts. |
+
+Do not infer protection from a green label elsewhere: check the setting for the current Work Mode request. Fast Route is separate from the response-mode picker and from Browser Tool.
+
+<Warning>For sensitive work, turn on ZDR before sending the task. Turning it on later does not retroactively change a request already sent through a non-ZDR route.</Warning>
+
+## Connected apps keep their own data
+
+Connected-account actions use **Composio** to reach the provider you authorized. Email, calendar events, documents, CRM records and posted messages are stored by their destination services under those services' own policies and your account permissions. ZDR for an AI model does not remove a sent email or erase a saved file.
+
+- Connect your own account and review the provider permissions.
+- Name the intended account when several accounts could fit.
+- Ask for read-only work or draft-only output when you do not want a live change.
+- Check the external service before retrying a failed send or edit.
+
+## Project files and browser credentials
+
+Project Knowledge Base files are encrypted in the browser before upload and retain their original formats. Relevant content can still be processed to answer a task; encryption is not a claim that Aura never reads the material you ask it to use.
+
+[Browser Tool](/chat/browser-tool) is opt-in per chat and requires Pro or Elite with Tool Router enabled. Store website logins in **Browser Vault**, not in the prompt. Vault credentials are encrypted and supplied to the relevant browser task rather than exposed as normal chat context.
+
+<Frame><img src="https://cdn.youniverse.ai/blog-hero/docs/knowledge.jpg" alt="Glass library representing protected project reference files" /></Frame>
+
+## Subscription access
+
+| Capability | Essential | Pro | Elite |
+| --- | --- | --- | --- |
+| Connected-app Work Mode in Quick Chat | Included access | Included access | Included access |
+| Create Projects and use reusable project knowledge | Not included | Included access | Included access |
+| Browser Tool | Not included | Included access | Included access |
+| Aura Agents and recurring jobs | Not included | Included access | Included access |
+
+Included **access** does not mean every tool-running task is free. See [Plans and credits](/account/plans) for current prices, included balances and top-ups.
+
+## How to think about credits
+
+Work Mode performs real model and tool work. Cost depends on the task, how much material is processed and how many actions are needed; do not treat the approximate Orchestration prompt price as a fixed price for Work Mode. Agent runs and AI Builder work have their own usage paths.
+
+To keep a task focused, specify the date range and required fields, reuse project references, request only the output you need, and separate read-only review from a large live update. Inspect the result before rerunning an entire multi-app chain.
+
+<CardGroup cols={2}>
+  <Card title="Trust and privacy" icon="shield" href="/account/privacy">The broader data-handling guide.</Card>
+  <Card title="Plans and credits" icon="credit-card" href="/account/plans">Subscription access and usage balances.</Card>
+</CardGroup>
+
+<AccordionGroup>
+  <Accordion title="Does ZDR cover Gmail, Drive or a website I log into?">No. It governs the model provider's handling of the model request. Connected apps and visited websites retain their own data according to their own policies.</Accordion>
+  <Accordion title="Can Essential use Work Mode without Projects?">Yes. Essential supports connected-app Work Mode in Quick Chat. Projects, Browser Tool and Agents require Pro or Elite.</Accordion>
+  <Accordion title="Does disconnecting an app undo completed work?">No. Removing authorization does not undo a message, document or record already created at the provider.</Accordion>
+</AccordionGroup>
