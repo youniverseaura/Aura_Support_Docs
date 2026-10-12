@@ -151,7 +151,10 @@
             "group": "AI Studio",
             "icon": "palette",
             "pages": [
-              "build/ai-studio"
+              "build/ai-studio",
+              "studio/images",
+              "studio/video",
+              "studio/lip-sync"
             ]
           }
         ]

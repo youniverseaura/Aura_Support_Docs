@@ -1,0 +1,44 @@
+---
+title: Create videos
+description: Turn an idea or reference media into a short clip with model-specific controls.
+icon: film
+---
+
+<Frame><img src="https://chat.youniverse.ai/__l5e/assets-v1/c737e83d-d636-4cbb-9abf-bc6a3bdf1707/docs-studio-video.jpg" alt="Glass camera, film strip and landscape frame" /></Frame>
+
+Open **AI Studio → Imagine → Video**. Describe a scene, subject movement and camera direction, then choose the model and supported settings.
+
+## Build your shot
+<Steps>
+<Step title="Write the scene">Describe what happens during the clip, not just how a still image looks. Keep one short clip focused on one coherent action.</Step>
+<Step title="Choose the output">Select the supported duration, aspect ratio, resolution and generation count. Model choices determine the available values and credit estimate.</Step>
+<Step title="Add compatible references">The workspace provides reference slots for start frames, end frames, images, video and audio. Use the slots supported by the selected model; unsupported slots remain disabled.</Step>
+<Step title="Review the generated clip">Play the output and inspect motion, continuity and audio before downloading or reusing it.</Step>
+</Steps>
+
+## Reference types
+| Reference | Purpose |
+| --- | --- |
+| Start frame | Establish the opening composition. |
+| End frame | Guide the final composition when the model supports it. |
+| Image references | Guide subject or visual appearance. |
+| Video references | Supply compatible movement or visual context. |
+| Audio references | Supply compatible audio context. |
+
+A model does not necessarily support every reference type. Where an audio-generation option is available, choose whether the clip should include generated audio.
+
+<Frame><img src="https://chat.youniverse.ai/__l5e/assets-v1/6f59dea8-4261-4b1f-9cd2-2afd8d959e80/docs-studio-storyboard.jpg" alt="Glass storyboard with three film frames and clapperboard" /></Frame>
+
+## A practical sequence
+Create a [reference image](/studio/images), generate a focused clip, then use [Music → Video](/studio/music) to create a matching soundtrack. For a speaking portrait rather than general scene animation, use [Lip sync](/studio/lip-sync).
+
+## History and iteration
+Explore and History keep previous Imagine work accessible. Remix revisits an earlier generation's settings; it does not guarantee an identical clip. Search History when you need an older result.
+
+<AccordionGroup>
+<Accordion title="Why can't I use an end frame or audio reference?">The selected model must support that input. Use a compatible model identified by the control rather than assuming every model accepts it.</Accordion>
+<Accordion title="Can a single prompt make a long finished film?">Video generation produces short clips within the selected model's limits. Plan longer productions as individual shots.</Accordion>
+<Accordion title="Does chat ZDR cover video generation?">Do not assume so. Read Imagine's Non-ZDR notice before sending sensitive media.</Accordion>
+</AccordionGroup>
+
+<Info>AI Studio controls require Pro or Elite. Duration, resolution and model affect the displayed credit estimate.</Info>
