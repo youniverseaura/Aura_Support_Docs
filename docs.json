@@ -53,13 +53,6 @@
             ]
           },
           {
-            "group": "Add context",
-            "icon": "paperclip",
-            "pages": [
-              "chat/files"
-            ]
-          },
-          {
             "group": "Voice",
             "icon": "mic",
             "pages": [
@@ -93,7 +86,8 @@
             "group": "Projects and files",
             "icon": "folder",
             "pages": [
-              "chat/projects"
+              "chat/projects",
+              "chat/files"
             ]
           }
         ]
