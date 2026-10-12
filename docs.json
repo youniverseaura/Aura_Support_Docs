@@ -57,18 +57,14 @@
             "group": "Add context",
             "icon": "paperclip",
             "pages": [
-              "chat/files",
-              "chat/projects"
+              "chat/files"
             ]
           },
           {
-            "group": "Act and speak",
+            "group": "Voice",
             "icon": "briefcase",
             "pages": [
-              "chat/work-mode",
-              "chat/browser-tool",
-              "chat/voice",
-              "chat/tool-router"
+              "chat/voice"
             ]
           }
         ]
@@ -79,12 +75,24 @@
           {
             "group": "Start working",
             "icon": "briefcase",
-            "pages": []
+            "pages": [
+              "chat/work-mode",
+              "chat/tool-router"
+            ]
           },
           {
             "group": "Apps and execution",
             "icon": "route",
-            "pages": []
+            "pages": [
+              "chat/browser-tool"
+            ]
+          },
+          {
+            "group": "Projects and files",
+            "icon": "folder",
+            "pages": [
+              "chat/projects"
+            ]
           }
         ]
       },
