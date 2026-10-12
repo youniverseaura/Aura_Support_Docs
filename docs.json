@@ -193,7 +193,8 @@
               "learn/zero-data-retention",
               "learn/prompt-caching",
               "learn/tokens-and-usage",
-              "learn/model-benchmarks"
+              "learn/model-benchmarks",
+              "learn/prompt-guide"
             ]
           }
         ]
@@ -210,6 +211,16 @@
               "account/security",
               "account/support"
             ]
+          }
+        ]
+      },
+      {
+        "tab": "Youniversity",
+        "groups": [
+          {
+            "group": "Youniversity",
+            "icon": "graduation-cap",
+            "pages": []
           }
         ]
       }

@@ -1,0 +1,171 @@
+---
+title: "Prompt guide"
+sidebarTitle: "Prompt guide"
+description: "An in-depth guide to getting dramatically better answers from Aura."
+icon: "pen-line"
+---
+
+<Frame>
+  <img src="https://chat.youniverse.ai/__l5e/assets-v1/b849de9e-4c59-41b6-aa11-55204c8e26d6/docs-learn-prompt-blocks.jpg" alt="Prompt card assembled from role, goal, context and format blocks" />
+</Frame>
+
+A prompt is a brief for a very capable assistant who knows nothing about you, your situation or what "good" looks like to you. The answer can only be as good as the brief. This guide shows exactly how to write great ones.
+
+## The core formula
+
+| Part | Question | Example |
+| --- | --- | --- |
+| **Goal** | What do you want? | "Write a cold email" |
+| **Context** | What does it need to know? | "We sell bookkeeping to dental clinics; the prospect just opened a second location" |
+| **Audience** | Who is it for? | "Practice owner, busy, skeptical of software" |
+| **Constraints** | What are the rules? | "Under 120 words, no jargon, one clear ask" |
+| **Format** | What should the output look like? | "Subject line + body, then 2 alternative subject lines" |
+
+**Weak:** "Write an email to a dentist."
+
+**Strong:** "Write a cold email to a dental practice owner who just opened a second location. We sell bookkeeping for multi-location clinics. They're busy and skeptical of software. Under 120 words, plain language, one ask: a 15-minute call. Give a subject line, the body, and two alternative subject lines."
+
+<Frame>
+  <img src="https://chat.youniverse.ai/__l5e/assets-v1/ea78ec1c-2dcd-4b87-a8b9-517099ec14b2/docs-learn-prompt-lens.jpg" alt="Cloudy shape focused through a lens into a sharp crystal" />
+</Frame>
+
+## 12 techniques that work
+
+<Steps>
+  <Step title="Be specific about the outcome">
+    Replace "make it better" with what better means: "shorter", "more persuasive to a CFO", "fix the logic in step 3".
+  </Step>
+  <Step title="Give context up front">
+    Your goal, background, what you tried and why it didn't work. Every missing fact gets filled with a guess.
+  </Step>
+  <Step title="Show an example">
+    One or two examples of the style or format you want beat paragraphs of description: "Match the tone of this: …"
+  </Step>
+  <Step title="Define the format and length">
+    Table, bullets, JSON, a numbered plan, a 3-sentence summary — and "max 5 bullets" or "about 300 words".
+  </Step>
+  <Step title="Assign a role when expertise matters">
+    "Act as a tax accountant reviewing this for a US freelancer" focuses vocabulary and priorities.
+  </Step>
+  <Step title="Break big tasks into steps">
+    Ask for an outline, approve it, then the full draft. Long, multi-part jobs go better as a sequence.
+  </Step>
+  <Step title="Ask it to reason on hard problems">
+    "Work through this step by step, then give the final answer" — or use Thinking / Frontier High.
+  </Step>
+  <Step title="Say what to avoid">
+    "No clichés like 'in today's fast-paced world'", "don't suggest hiring anyone".
+  </Step>
+  <Step title="Separate instructions from material">
+    Wrap pasted documents in clear markers like `"""` or `<document>…</document>` and keep your instruction outside them.
+  </Step>
+  <Step title="Ask for sources and uncertainty">
+    "Cite sources with links" and "say if you're not sure". Aura searches live when facts matter; asking makes it explicit.
+  </Step>
+  <Step title="Iterate, don't restart">
+    Follow up in the same chat: "Make paragraph 2 punchier", "now as a LinkedIn post". The context is already there (and cached).
+  </Step>
+  <Step title="Let Aura improve your prompt">
+    "Here's my prompt. Ask me any questions you need, then rewrite it to be clearer." Great for important or recurring tasks.
+  </Step>
+</Steps>
+
+## Templates you can copy
+
+<AccordionGroup>
+  <Accordion title="Research and decisions">
+    ```text
+    I need to decide between [option A] and [option B] for [goal].
+    My situation: [budget, timeline, constraints].
+    Compare them on [criteria 1, 2, 3] in a table, using current sources with links.
+    Then give a recommendation, the main risk, and what would change your mind.
+    ```
+  </Accordion>
+  <Accordion title="Writing">
+    ```text
+    Write a [type of piece] for [audience] about [topic].
+    Goal: [what the reader should think or do after].
+    Tone: [warm, direct, expert]. Length: [words].
+    Must include: [points]. Avoid: [things].
+    Give 2 versions with different angles.
+    ```
+  </Accordion>
+  <Accordion title="Summarizing a document">
+    ```text
+    Summarize the attached document for [who].
+    Give: a 3-sentence summary, the 5 most important points,
+    any numbers and deadlines, and open questions or risks.
+    Quote the exact sentence for anything surprising.
+    ```
+  </Accordion>
+  <Accordion title="Data and spreadsheets">
+    ```text
+    Here is my data [attach or paste]. Columns mean: [explain].
+    Find [trends / anomalies / top performers].
+    Show the method, a summary table, and one chart idea.
+    Flag any data quality issues first.
+    ```
+  </Accordion>
+  <Accordion title="Coding">
+    ```text
+    Language/framework: [x]. Goal: [what the code should do].
+    Current code: [paste]. Error or behavior: [exact message].
+    Expected: [what should happen]. Constraints: [no new libraries, etc.].
+    Explain the cause, then give the full fixed code.
+    ```
+  </Accordion>
+  <Accordion title="Work Mode (connected apps)">
+    ```text
+    In [app], find [items] from [time range] where [condition].
+    Then [action] in [other app], named [format], in folder [path].
+    Show me what you'll do before sending anything external.
+    ```
+  </Accordion>
+  <Accordion title="AI Builder">
+    ```text
+    Build a [type of app] for [users] that lets them [core job].
+    Pages: [list]. Data to store: [list].
+    Style: [mood, colors, references]. Must work great on phones.
+    Start with [the most important screen] and keep it simple.
+    ```
+  </Accordion>
+  <Accordion title="AI Studio images">
+    ```text
+    [Subject], [action or pose], [setting], [lighting], [camera or art style],
+    [color palette], [mood]. Aspect ratio [x:y]. No text in the image.
+    ```
+  </Accordion>
+  <Accordion title="Agents">
+    ```text
+    Every [schedule], check [source] for [condition].
+    If found, [action] and message me a short summary with links.
+    Never [forbidden action]. Ask me before spending money or deleting anything.
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## Pick the right mode
+
+| You want | Use |
+| --- | --- |
+| Fast everyday answers, no message limit | **Unlimited** |
+| A high-stakes answer checked by four models | **Orchestration** |
+| One specific model at a chosen depth | **Frontier** |
+| Actions in your apps (email, docs, CRM) | **Work Mode** |
+| Something that runs on its own | **Aura Agents** |
+
+## Common mistakes
+
+- **Too vague:** "Help with marketing." → Say the product, audience, channel and goal.
+- **Hidden assumptions:** Mentioning "the report" without attaching it.
+- **Everything at once:** Ten tasks in one message. Split them.
+- **Restarting every time:** New chats lose context. Iterate instead.
+- **No length:** You'll get a default that's probably wrong for you.
+
+## Prompting by voice
+
+Speak naturally and add the format at the end: "…keep it to two sentences." Pause briefly when done — Aura detects when you've finished your thought.
+
+<Tip>
+Save prompts you reuse. A prompt you've refined five times is worth more than a new one every day.
+</Tip>
