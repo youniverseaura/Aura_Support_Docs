@@ -1,7 +1,7 @@
 ---
-title: "Chat"
+title: "3-Mode Chat"
 sidebarTitle: "Overview"
-description: "Ask anything, add context and turn answers into action."
+description: "One chat, three modes: Unlimited, Orchestration and Frontier."
 icon: "messages-square"
 ---
 
@@ -9,30 +9,48 @@ icon: "messages-square"
   <img src="https://cdn.youniverse.ai/blog-hero/docs/chat-bubbles.jpg" alt="Two glass speech bubbles" />
 </Frame>
 
-Chat is where most work in Aura starts. Ask a question, research an idea, analyze a file or ask Aura to act inside your apps.
+Chat is where most work in Aura starts. Ask a question, research an idea, analyze a file or ask Aura to act inside your apps. Every chat runs in one of **three modes**, and you can switch at any time from the mode picker above the composer.
 
-## Why Aura's answers are different
+## The three modes at a glance
 
 <Frame>
   <img src="https://cdn.youniverse.ai/blog-hero/docs/four-models.jpg" alt="Four colored spheres beaming light into one prism" />
 </Frame>
 
-Aura can ask GPT, Claude, Gemini and Grok the same question and combine the best of each. When facts change — prices, news, weather — it searches the live web and cites sources.
+| Mode | Tag in the app | What it does | Pick it when |
+| --- | --- | --- | --- |
+| **[Unlimited](/chat/unlimited)** | Everyday | One fast model, uncapped, always protected by Zero Data Retention. | You want quick answers all day without counting messages. |
+| **[Orchestration](/chat/orchestration)** | Highest accuracy | Four frontier models answer, debate, and are combined into one vetted answer. | Being wrong would be costly. |
+| **[Frontier](/chat/frontier)** | Your pick | One frontier model you choose — ChatGPT, Gemini, Claude or Grok — at Low or Efficient reasoning. | You prefer one model's strengths. |
+
+<Tip>Every mode supports [voice](/chat/voice): a realistic AI voice can speak any answer, and you can talk back hands-free.</Tip>
+
+## Things every mode shares
+
+- **Live web search** with sources whenever facts may have changed. See [Live web search](/chat/live-search).
+- **Files and images** you attach. See [Add files](/chat/files).
+- **Zero Data Retention** by default — models don't store or train on your prompts. The only exception is the optional Fast Mode in Orchestration and Frontier, which is clearly marked.
 
 <CardGroup cols={2}>
-  <Card title="Chat modes" icon="layers" href="/chat/modes">Pick speed or depth.</Card>
+  <Card title="Choosing a mode" icon="layers" href="/chat/modes">A side-by-side guide.</Card>
+  <Card title="Unlimited" icon="infinity" href="/chat/unlimited">Uncapped everyday chat.</Card>
+  <Card title="Orchestration" icon="workflow" href="/chat/orchestration">Four models, one answer.</Card>
+  <Card title="Frontier" icon="brain" href="/chat/frontier">Your model, your depth.</Card>
   <Card title="Prompting" icon="pencil" href="/chat/prompting">Get better answers faster.</Card>
-  <Card title="Live web search" icon="globe" href="/chat/live-search">Current facts with sources.</Card>
-  <Card title="Add files" icon="paperclip" href="/chat/files">Documents, sheets and images.</Card>
   <Card title="Work Mode" icon="briefcase" href="/chat/work-mode">Act inside 1,500+ apps.</Card>
-  <Card title="Voice mode" icon="mic" href="/chat/voice">Talk with Iris.</Card>
 </CardGroup>
 
 ## Common questions
 
 <AccordionGroup>
+  <Accordion title="Which mode should I start with?">
+    Unlimited for everyday questions. Switch to Orchestration for important decisions, or Frontier when you want a specific model.
+  </Accordion>
+  <Accordion title="Can I switch modes mid-conversation?">
+    Yes. Change the mode in the picker and your next message uses it.
+  </Accordion>
   <Accordion title="Does Aura search the web?">
-    Yes. When facts change, it searches live and cites sources.
+    Yes, in every mode. When facts change, it searches live and cites sources.
   </Accordion>
   <Accordion title="Can Aura act inside my apps?">
     Yes, with Work Mode on Essential, Pro and Elite.

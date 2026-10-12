@@ -38,14 +38,17 @@
         ]
       },
       {
-        "tab": "Chat",
+        "tab": "3-Mode Chat",
         "groups": [
           {
-            "group": "Chat",
+            "group": "3-Mode Chat",
             "icon": "messages-square",
             "pages": [
               "chat/overview",
               "chat/modes",
+              "chat/unlimited",
+              "chat/orchestration",
+              "chat/frontier",
               "chat/prompting",
               "chat/live-search"
             ]
@@ -206,7 +209,7 @@
       "website": "https://youniverse.ai"
     }
   },
-  "description": "Guides and support for Aura by Youniverse.AI — 3 AI Chat modes, AI App Builder, Work Mode, Voice, Agents, AI Studio, privacy and billing.",
+  "description": "Guides and support for Aura by Youniverse.AI \u2014 3 AI Chat modes, AI App Builder, Work Mode, Voice, Agents, AI Studio, privacy and billing.",
   "redirects": [
     {
       "source": "/",
