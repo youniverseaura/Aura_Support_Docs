@@ -30,7 +30,14 @@
             "group": "Core concepts",
             "icon": "compass",
             "pages": [
-              "home/chats-and-projects",
+              "home/how-aura-works",
+              "home/chats-and-projects"
+            ]
+          },
+          {
+            "group": "Company",
+            "icon": "building",
+            "pages": [
               "get-started/about"
             ]
           }
