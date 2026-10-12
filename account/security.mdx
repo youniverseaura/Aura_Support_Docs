@@ -1,6 +1,7 @@
 ---
-title: "Security"
-description: "How Aura protects your account, apps and email."
+title: "Security and trust"
+sidebarTitle: "Security & trust"
+description: "How Aura protects your account, your data and your apps — and the providers behind it."
 icon: "shield-check"
 ---
 
@@ -8,12 +9,36 @@ icon: "shield-check"
   <img src="https://cdn.youniverse.ai/blog-hero/docs/security.jpg" alt="Glass shield protecting an app window" />
 </Frame>
 
-<CardGroup cols={2}>
-  <Card title="Your data" icon="lock" href="/account/privacy">Zero data retention on chat routes.</Card>
-  <Card title="Agent approvals" icon="hand" href="/build/agents">Sending, deleting and spending wait for your OK.</Card>
-  <Card title="App scans" icon="scan" href="/builder/scans">Automatic security reviews for every built app.</Card>
-  <Card title="Your keys" icon="key-round" href="/builder/setup-keys">Stored encrypted, never shown to your app's users.</Card>
-</CardGroup>
+Aura is built on a small set of carefully chosen infrastructure providers. Each one handles one job, each one is an industry leader at that job, and your data is never sold or shared beyond what's needed to run the service.
+
+## How your data is protected
+
+<Frame>
+  <img src="https://cdn.youniverse.ai/blog-hero/docs/privacy-shield.jpg" alt="Layers of glass protection around a chat bubble" />
+</Frame>
+
+- **Zero data retention on chat.** Chat routes use zero data retention (ZDR): AI providers process your request and keep nothing, and nothing is used to train models. Optional features without ZDR — like Fast Mode and some video and music generation — are clearly labeled and only run when you choose them. See [Privacy](/account/privacy).
+- **Encryption in transit and at rest.** All traffic between your device and Aura is encrypted with HTTPS/TLS, and stored data — files, knowledge base content, app data — is encrypted at rest.
+- **Gated media links.** Shared images, videos and files go through short-lived, gated links — never permanent public URLs.
+- **Your account is yours.** Sign in with Apple or an email sign-in link. There are no passwords to leak, and you can disconnect any connected app at any time.
+
+## The providers behind Aura
+
+| Provider | What it does for Aura | What they store |
+| --- | --- | --- |
+| **Cloudflare** | Sits at the network edge: DNS, DDoS protection, web application firewall, caching and fast delivery worldwide | Request logs and cached pages at the edge — not your chat content |
+| **Fly.io** | Runs Aura's server infrastructure in secure, isolated virtual machines | The running application — no long-term user data |
+| **OpenRouter** | Routes chat requests to AI models over zero-data-retention endpoints | Nothing on ZDR routes — requests are processed and discarded |
+| **Composio** | Powers the 1,500+ connected-app integrations in Work Mode and Agents | Connection tokens needed to act on your behalf, revocable any time |
+| **Resend** | Delivers transactional email — sign-in links, receipts, alerts | Delivery records for the emails Aura sends you |
+
+<Note>
+Aura's built-in integrations run on Aura-managed cloud infrastructure. Your built apps' databases, file storage and hosting are operated by Aura on the providers above — there is no third party with independent access to your app's data.
+</Note>
+
+## Connected apps and agents
+
+Work Mode and Agents act through your own connected accounts via Composio. You connect each app yourself, you can disconnect it at any time from Settings, and agents never send, delete or spend without your approval. See [Agents](/build/agents).
 
 ## Safer email
 
@@ -21,16 +46,26 @@ icon: "shield-check"
   <img src="https://cdn.youniverse.ai/blog-hero/docs/envelope-trust.jpg" alt="Glass envelope sealed with a shield" />
 </Frame>
 
-Aura Mail gives every message a trust score and flags impersonation and phishing attempts before you open them.
+Aura Mail gives every message a trust score from 0 to 100 and flags impersonation and phishing attempts before you open them. Transactional email Aura sends — sign-in links, receipts, alerts — is delivered through Resend with SPF, DKIM and DMARC authentication, so you can tell real Aura email from fakes.
+
+## Built-app security
+
+Every app you build with the AI App Builder gets automatic security reviews: a rule engine that learns from past findings, live threat-intel checks and safe library upgrades. See [Security scans](/builder/scans).
 
 ## Common questions
 
 <AccordionGroup>
+  <Accordion title="Who can see my chats?">
+    On chat routes, no one — they run over zero-data-retention endpoints, so AI providers process each request and keep nothing. Aura staff cannot read your chat content.
+  </Accordion>
+  <Accordion title="Where is my data stored?">
+    Your files, knowledge base and app data live in Aura-managed cloud storage and databases, encrypted at rest, served worldwide through Cloudflare's network.
+  </Accordion>
+  <Accordion title="What happens when I disconnect an app?">
+    The connection token is revoked and Aura can no longer act in that app. You can reconnect it any time.
+  </Accordion>
   <Accordion title="Do agents act without asking me?">
     No. Sending, deleting and spending wait for your approval.
-  </Accordion>
-  <Accordion title="Where are my app's keys kept?">
-    Stored encrypted and never shown to your app's users.
   </Accordion>
   <Accordion title="How does Aura Mail spot phishing?">
     Every message gets a trust score, and impersonation or phishing attempts are flagged before you open them.
