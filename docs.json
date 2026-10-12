@@ -87,6 +87,7 @@
             "icon": "rocket",
             "pages": [
               "builder/publish",
+              "builder/storage",
               "builder/domains",
               "builder/mail"
             ]
@@ -97,6 +98,7 @@
             "pages": [
               "builder/setup-keys",
               "builder/mcp",
+              "builder/integrations",
               "builder/data-history",
               "builder/collaboration"
             ]
@@ -106,6 +108,8 @@
             "icon": "shield-check",
             "pages": [
               "builder/skills",
+              "builder/performance",
+              "builder/seo-engine",
               "builder/scans",
               "builder/seo"
             ]

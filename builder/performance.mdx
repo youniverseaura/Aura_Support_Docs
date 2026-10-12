@@ -1,0 +1,64 @@
+---
+title: "Performance scans and monitoring"
+sidebarTitle: "Performance & monitoring"
+description: "Find slow code, bloat and breakage before your users do."
+icon: "gauge"
+---
+
+<Frame>
+  <img src="/images/builder/builder-perf-engine.jpg" alt="Glass speedometer beside a stack of code blocks being trimmed" />
+</Frame>
+
+The **Performance** tab gives your app a health score and lists what's slowing it down or making it fragile — with a one-tap fix for each.
+
+## What it looks for
+
+<CardGroup cols={2}>
+  <Card title="Slow paths" icon="turtle">Heavy pages, slow database queries and wasted work.</Card>
+  <Card title="Bloat" icon="package">Oversized files, unused libraries and heavy images.</Card>
+  <Card title="Stale code" icon="archive">Dead code, old content and leftovers from earlier builds.</Card>
+  <Card title="Broken" icon="triangle-alert">Correctness risks — things likely to fail.</Card>
+  <Card title="Maintainability" icon="wrench">Duplicate helpers and unused exports that make future builds slower and pricier.</Card>
+</CardGroup>
+
+Each finding has a severity. Fixes that only *remove* things are marked **safe** — they can't change what your app does.
+
+## Quick and deep scans
+
+Performance audits run on Claude Sonnet at medium reasoning. **Deep** reviews more files, more screenshots and more recent changes than **Quick**.
+
+## Auto-clean
+
+Turn on **auto-clean** and Aura applies the safe removals for you, every two weeks or monthly.
+
+## Fix everything at once
+
+When Security and Performance both have open items, **Fix all together** sends them as one build — cheaper than two.
+
+## Monitoring: catch breakage
+
+<Frame>
+  <img src="/images/builder/builder-qa-nightly.jpg" alt="Magnifying glass finding a cracked tile in a browser window, with a moon and clock" />
+</Frame>
+
+Monitoring checks your app after every build and on a schedule (daily or weekly, always or only when something changed). It reads your code and live error logs and runs a real smoke test of the live app, then reports actual breakage: sign-in, payments, saving data, dead buttons and integrations. It also scrolls each page fully and attaches a screenshot as proof of anything it reports.
+
+Automatic monitoring runs on Gemini 3.8 Flash; a check you start yourself runs on Claude Sonnet.
+
+## What it costs
+
+| | Cost |
+| --- | --- |
+| Monitoring checks | Free |
+| Performance audits | Credits, shown in **Usage & billing** |
+| Applying a fix | A build run |
+
+<Tip>Want a written plan first? Run [`/code-review`](/builder/skills) — it starts from your latest findings.</Tip>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can a safe fix break my app?">Safe fixes only remove unused things, so they can't change what your app does.</Accordion>
+  <Accordion title="How often does auto-clean run?">Every two weeks or monthly — your choice. It's off until you turn it on.</Accordion>
+  <Accordion title="What's the difference between performance and monitoring?">Performance finds what's slow or bloated. Monitoring finds what's broken on the live app.</Accordion>
+</AccordionGroup>
