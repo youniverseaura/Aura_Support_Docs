@@ -139,14 +139,19 @@
         ]
       },
       {
-        "tab": "Create",
+        "tab": "Aura Agents",
+        "pages": [
+          "build/agents"
+        ]
+      },
+      {
+        "tab": "AI Studio",
         "groups": [
           {
-            "group": "Create",
+            "group": "AI Studio",
             "icon": "palette",
             "pages": [
-              "build/ai-studio",
-              "build/agents"
+              "build/ai-studio"
             ]
           }
         ]
