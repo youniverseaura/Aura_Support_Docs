@@ -1,0 +1,82 @@
+---
+title: "Tokens and usage"
+sidebarTitle: "Tokens and usage"
+description: "Input tokens, output tokens, reasoning, context windows and what they cost."
+icon: "coins"
+---
+
+<Frame>
+  <img src="https://chat.youniverse.ai/__l5e/assets-v1/f0225238-10b0-48ac-bb44-3bb834f8aef5/docs-learn-tokens-tiles.jpg" alt="Text broken into tiles flowing into and out of an AI orb" />
+</Frame>
+
+AI models don't read words — they read **tokens**, small chunks of text. Speed, cost and limits are all measured in tokens.
+
+## What is a token?
+
+- About **4 characters** or **¾ of a word** in English.
+- 100 tokens ≈ 75 words. A full page ≈ 500–700 tokens.
+- Code, numbers and non-English text often use **more** tokens per word.
+- Images, audio and PDFs are converted into tokens too.
+
+## The four kinds of tokens
+
+| Type | What it is | Relative cost |
+| --- | --- | --- |
+| **Input** | Everything the model reads: your message, history, instructions, files, search results | Base price |
+| **Cached input** | Input the provider processed recently | 75–95% cheaper |
+| **Output** | The words the model writes back | Usually **5×** input |
+| **Reasoning** | Hidden thinking before answering | Billed as output |
+
+<Tip>
+Output is the expensive part. Asking for "a short answer" or "bullets only" saves more than trimming your question.
+</Tip>
+
+## Context window
+
+The **context window** is the most tokens a model can consider at once — history, files and its own answer combined.
+
+<Frame>
+  <img src="https://chat.youniverse.ai/__l5e/assets-v1/e3968fd1-7824-40b9-98bb-1cd0075b9781/docs-learn-tokens-window.jpg" alt="Glass scroll with a highlighted window" />
+</Frame>
+
+| Model | Context window | Max answer |
+| --- | --- | --- |
+| Claude Haiku 5.5 / Opus 5.5 | 1,000,000 | 128,000 |
+| GPT-6 Luna / 6.1 Sol / 6 Astra | 1,050,000 | 128,000 |
+| Gemini 3.8 Flash | 1,048,576 | 65,536 |
+| Grok 4.7 | 500,000 | 450,000 |
+
+Aura keeps the **last 40 turns** of a conversation in view and trims older ones in blocks, keeping answers focused and caching effective. Very long prompts (over roughly 100k–272k tokens depending on the model) are billed at a higher tier by providers.
+
+## Reasoning effort
+
+- **Low** — quick factual answers.
+- **Medium** — Aura's default for most chat.
+- **High** — complex analysis, math and code (Frontier High, Thinking).
+
+More effort means better answers on hard problems, but more output tokens and time.
+
+## How this becomes credits
+
+Aura converts real provider token costs into credits. That's why:
+
+- A typical Orchestration message costs about **~20 credits** (four models answer, then a comparison).
+- Long documents, high reasoning and long answers cost more.
+- Follow-ups in the same chat are often cheaper thanks to [prompt caching](/learn/prompt-caching).
+
+## Spend fewer tokens
+
+1. One topic per chat; start a new chat when the topic changes.
+2. State the format and length you want.
+3. Paste only the relevant part of long documents.
+4. Use Unlimited for everyday questions, Orchestration for high-stakes ones.
+5. Pick Frontier Low or Efficient unless you need High.
+
+<AccordionGroup>
+  <Accordion title="Why did a short question cost more than expected?">
+    The model also reads the whole conversation, attached files and live search results — those are input tokens too.
+  </Accordion>
+  <Accordion title="Do hidden reasoning tokens count?">
+    Yes, providers bill reasoning as output. Aura keeps reasoning at medium by default to balance quality and cost.
+  </Accordion>
+</AccordionGroup>

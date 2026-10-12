@@ -189,7 +189,11 @@
             "icon": "graduation-cap",
             "pages": [
               "learn/how-orchestration-works",
-              "learn/what-is-an-app"
+              "learn/what-is-an-app",
+              "learn/zero-data-retention",
+              "learn/prompt-caching",
+              "learn/tokens-and-usage",
+              "learn/model-benchmarks"
             ]
           }
         ]

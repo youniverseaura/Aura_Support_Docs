@@ -1,0 +1,70 @@
+---
+title: "Zero Data Retention"
+sidebarTitle: "Zero Data Retention"
+description: "What ZDR means, how Aura enforces it, and where it applies."
+icon: "shield-check"
+---
+
+<Frame>
+  <img src="https://chat.youniverse.ai/__l5e/assets-v1/4804dcfc-154d-4b1d-8e04-ae5df128c772/docs-learn-zdr-vault.jpg" alt="Glass vault where messages pass through and dissolve" />
+</Frame>
+
+**Zero Data Retention (ZDR)** means the AI provider that processes your prompt is required to **not store it and not train on it**. The request is processed, the answer is returned, and the content is discarded.
+
+## Why it matters
+
+Most consumer AI products keep your prompts — sometimes for 30 days of abuse monitoring, sometimes indefinitely for training. With ZDR:
+
+- Your prompts and files are **never used to train** any model.
+- The provider keeps **no copy** of the prompt or answer after the request completes.
+- A breach at a model provider cannot expose conversations that were never stored.
+
+## How Aura enforces it
+
+<Steps>
+  <Step title="Every request carries a deny flag">
+    Each AI call is sent with a strict **data collection: deny** policy. Providers that would store or train on data are excluded from routing entirely.
+  </Step>
+  <Step title="Only ZDR endpoints are eligible">
+    If a model has no ZDR-compliant endpoint, Aura does not send private traffic to it and uses a compliant version instead.
+  </Step>
+  <Step title="Receipts per call">
+    Aura records which provider handled each request so compliance can be audited, without the provider storing your prompt.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="https://chat.youniverse.ai/__l5e/assets-v1/3db6233e-3a5a-4796-88aa-184548761cdd/docs-learn-zdr-flow.jpg" alt="Message flows to an AI model and is shredded afterwards" />
+</Frame>
+
+## Where ZDR applies
+
+| Surface | ZDR |
+| --- | --- |
+| Unlimited chat | Always on |
+| Orchestration and Frontier | On by default, shown with the shield badge |
+| Work Mode reasoning | On |
+| Voice transcription | On |
+| AI Studio Transcribe | On |
+| Opt-in Fast Mode | Off — clearly badged when you turn it on |
+| Image, video and music generation | Off — creative models have no ZDR endpoint, and are labeled |
+
+<Note>
+ZDR covers the **AI provider**. Your chat history is still saved in your Aura account so you can return to it — you control and can delete it.
+</Note>
+
+## ZDR vs. "we don't train on your data"
+
+Many companies promise not to train on your data but still **retain** it for weeks. ZDR is stricter: no training **and** no retention at the model provider.
+
+<AccordionGroup>
+  <Accordion title="Does ZDR make answers worse?">
+    No. The same models answer; only storage and training are switched off.
+  </Accordion>
+  <Accordion title="Why is the shield hidden sometimes?">
+    The shield only shows when the current route is actually ZDR. Turn on Fast Mode or generate media and it disappears, so you always know.
+  </Accordion>
+  <Accordion title="Does prompt caching break ZDR?">
+    No. Caches are short-lived, held in memory, scoped to your conversation, and expire automatically. See [Prompt caching](/learn/prompt-caching).
+  </Accordion>
+</AccordionGroup>

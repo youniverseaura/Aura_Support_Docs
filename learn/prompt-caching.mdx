@@ -1,0 +1,83 @@
+---
+title: "Prompt caching"
+sidebarTitle: "Prompt caching"
+description: "How Aura reuses work between messages to answer faster and cost less."
+icon: "zap"
+---
+
+<Frame>
+  <img src="https://chat.youniverse.ai/__l5e/assets-v1/d5e75e2a-9b2c-4159-8b48-43d9ecd48600/docs-learn-cache-stack.jpg" alt="Stack of glass blocks, the lower ones cached" />
+</Frame>
+
+Every time you send a message, the AI re-reads **everything** before it: instructions, tool definitions and the whole conversation — usually 90%+ of the input. **Prompt caching** lets the provider keep that already-processed beginning in memory, so the next message only pays full price for what is new.
+
+## The economics
+
+Current list prices per million tokens:
+
+| Model | Fresh input | Cached input | Discount |
+| --- | --- | --- | --- |
+| Claude Haiku 5.5 | $0.10 | $0.01 | 90% |
+| Claude Opus 5.5 | $4.00 | $0.20 | 95% |
+| GPT-6.1 Sol | $2.00 | $0.10 | 95% |
+| GPT-6 Luna | $0.10 | $0.01 | 90% |
+| Gemini 3.8 Flash | $0.75 | $0.075 | 90% |
+| Grok 4.7 | $2.00 | $0.50 | 75% |
+
+Cached tokens also skip most of the compute, so the first word of the answer arrives sooner.
+
+## Why most apps get this wrong
+
+A cache only works if the **beginning of the prompt is byte-for-byte identical** to last time. Many chat apps break it on every message:
+
+- They slide the history window by one message per turn, so the start changes every time.
+- They insert timestamps, search results or memory near the top.
+- They spread a conversation across servers, each with a cold cache.
+- They mark one cache point, or mark it inside text that later changes.
+
+## How Aura does it
+
+<Steps>
+  <Step title="Stable layout">
+    Unchanging content (instructions, tools) always goes first. Anything that changes each turn — live search results, files, the time — goes at the end.
+  </Step>
+  <Step title="Two cache points, placed carefully">
+    The system prompt gets a one-hour cache and a second point lands on the last settled message — never inside the newest four messages, which can still change.
+  </Step>
+  <Step title="History moves in blocks of 10">
+    Aura keeps a rolling 40-turn history but drops old messages ten at a time, so the cached beginning stays valid for many turns in a row.
+  </Step>
+  <Step title="Sticky routing">
+    Every conversation carries a stable session key, so it keeps landing on the same warm cache instead of a cold server.
+  </Step>
+  <Step title="Per-model handling">
+    Claude, Gemini and GPT cache differently (explicit breakpoints, last-breakpoint-only, or cache keys). Aura applies the right method to each.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="https://chat.youniverse.ai/__l5e/assets-v1/3a6e0704-bba8-4733-8468-0e35d792336b/docs-learn-cache-savings.jpg" alt="Speedometer and coin jar" />
+</Frame>
+
+## Measured results
+
+- In a recent 7-day sample of logged requests, **69% of all input tokens were served from cache**.
+- A repeated 17,000-token chat turn dropped from **$0.0347 to $0.0018** — about 95% cheaper.
+- A repeated 26,000-token AI Builder scan dropped from **$0.21 to $0.009**.
+
+Those savings are why Aura can offer Unlimited chat and low per-message credits.
+
+## Keep your cache warm
+
+- **Stay in one chat** per topic. A new chat starts cold.
+- **Follow up quickly** — conversation caches last about 5 minutes; instruction caches about an hour.
+- **Attach files once**, early, instead of re-uploading them.
+
+<AccordionGroup>
+  <Accordion title="Is cached data stored?">
+    Only briefly, in the provider's memory, scoped to your conversation, and it expires automatically. It is never used for training and is compatible with [Zero Data Retention](/learn/zero-data-retention).
+  </Accordion>
+  <Accordion title="Can a cache leak to other users?">
+    No. A cache only matches an identical prompt beginning, which includes your private conversation.
+  </Accordion>
+</AccordionGroup>
