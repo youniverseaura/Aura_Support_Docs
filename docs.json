@@ -41,7 +41,7 @@
         "groups": [
           {
             "group": "3-Mode Chat",
-            "icon": "messages-square",
+            "icon": "comments",
             "pages": [
               "chat/overview",
               "chat/modes",
@@ -54,7 +54,7 @@
           },
           {
             "group": "Voice",
-            "icon": "mic",
+            "icon": "microphone",
             "pages": [
               "chat/voice"
             ]
@@ -116,7 +116,7 @@
           },
           {
             "group": "Configure",
-            "icon": "settings",
+            "icon": "sliders",
             "pages": [
               "builder/setup-keys",
               "builder/mcp",
@@ -144,7 +144,7 @@
           "build/agents",
           {
             "group": "Features",
-            "icon": "bot",
+            "icon": "face-smile",
             "pages": [
               "agents/create",
               "agents/triggers",
