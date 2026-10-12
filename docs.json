@@ -200,6 +200,18 @@
         ]
       },
       {
+        "tab": "Youniversity",
+        "groups": [
+          {
+            "group": "Youniversity",
+            "icon": "graduation-cap",
+            "pages": [
+              "youniversity/index"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Trust & billing",
         "groups": [
           {
@@ -211,16 +223,6 @@
               "account/security",
               "account/support"
             ]
-          }
-        ]
-      },
-      {
-        "tab": "Youniversity",
-        "groups": [
-          {
-            "group": "Youniversity",
-            "icon": "graduation-cap",
-            "pages": []
           }
         ]
       }
