@@ -226,7 +226,12 @@
               "use-cases/booking-app",
               "use-cases/restaurant-site",
               "use-cases/client-portal",
-              "use-cases/team-dashboard"
+              "use-cases/team-dashboard",
+              "use-cases/inventory-tracker",
+              "use-cases/event-site",
+              "use-cases/community-portal",
+              "use-cases/landing-page",
+              "use-cases/habit-tracker"
             ]
           }
         ]
