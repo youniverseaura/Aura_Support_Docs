@@ -40,6 +40,23 @@ The **Tool Router** is the bridge between you and your apps. It's the engine tha
   />
 </Frame>
 
+## Multi-step work, not just one command
+
+The router can combine tools from several apps. Steps that depend on earlier results must wait for those results; independent work can run together. For example, it can read a spreadsheet, research the listed companies, create a report and place it in the requested folder.
+
+Describe the **end state**, not a tool name. Include source, date range, account, output format, destination and exclusions. If you only want a draft, say **draft only — do not send**. If a connection or required detail is missing, resolve it before expecting the action to finish.
+
+## Connected tools, public research and browser tasks
+
+| Task | Appropriate capability |
+| --- | --- |
+| Read email or update an authenticated app | Your connected app and its granted permissions |
+| Read a public URL, search current facts or look up public information | Public reading and search tools; Browser Tool is not required |
+| Log into a website, click controls or fill a web form | Browser Tool, explicitly enabled in that chat |
+| Analyze a large dataset or construct a complex downloadable file | Code execution / workbench where the task requires it |
+
+The workbench is a working environment for calculations, transformations and file creation; it is not an extra app account or permission bypass.
+
 ## Where it's used
 
 | Surface | Tool Router |
