@@ -107,8 +107,7 @@
             "icon": "hammer",
             "pages": [
               "build/ai-app-builder",
-              "builder/first-app",
-              "builder/games"
+              "builder/first-app"
             ]
           },
           {
@@ -216,6 +215,18 @@
               "use-cases/competitor-watch",
               "use-cases/meeting-prep",
               "use-cases/online-store"
+            ]
+          },
+          {
+            "group": "AI Builder ideas",
+            "icon": "lightbulb",
+            "pages": [
+              "builder/games",
+              "use-cases/portfolio",
+              "use-cases/booking-app",
+              "use-cases/restaurant-site",
+              "use-cases/client-portal",
+              "use-cases/team-dashboard"
             ]
           }
         ]
