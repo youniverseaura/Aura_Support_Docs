@@ -31,7 +31,6 @@
             "icon": "compass",
             "pages": [
               "home/chats-and-projects",
-              "home/integrations",
               "get-started/about"
             ]
           }
@@ -84,6 +83,7 @@
             "group": "Apps and execution",
             "icon": "route",
             "pages": [
+              "home/integrations",
               "chat/browser-tool"
             ]
           },
