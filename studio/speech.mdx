@@ -1,0 +1,55 @@
+---
+title: Speech and voices
+description: Create narration with voice discovery, expressive delivery and export settings.
+icon: microphone
+---
+
+<Frame><img src="https://chat.youniverse.ai/__l5e/assets-v1/982b9812-45cc-4e3a-be1d-6432d2bfceea/docs-studio-speech.jpg" alt="Glass studio microphone, open script and audio wave" /></Frame>
+
+Open **AI Studio → Speech** to turn written text into narration. **Settings** configures the next generation; **History** opens previous speech.
+
+## Choose a voice
+The voice picker has **Explore** and **My Voices**, with language, accent and gender filters. Preview voices before committing to a long script. Voice choice and delivery settings work together; the same words can sound very different across voices.
+
+## Choose a model
+| Model | Intended use |
+| --- | --- |
+| Flash v2.5 | Fast speech generation. |
+| Multilingual v2 | Natural multilingual narration and longer-form speech. |
+| v3 (expressive) | Emotional delivery and supported inline audio tags. |
+
+Model limits vary. Use the character count and selected model's limit shown in the workspace rather than treating every model as interchangeable.
+
+## Delivery controls
+| Control | What it changes |
+| --- | --- |
+| Speed | How quickly the voice speaks. |
+| Stability | Delivery consistency versus variation. |
+| Similarity | Adherence to the selected voice's character. |
+| Style Exaggeration | Strength of the voice's stylistic delivery where supported. |
+| Speaker boost | Voice similarity enhancement where supported. |
+| Language | The language used for synthesis. |
+| Output format | Available PCM, MP3 or Opus export settings. |
+
+Some controls depend on the model. Do not expect a disabled setting to affect the result.
+
+<Frame><img src="https://chat.youniverse.ai/__l5e/assets-v1/d3f0d9c7-fbe0-4fd6-8c25-155cfa442c22/docs-studio-voices.jpg" alt="Three glass microphones with distinct voice waveforms" /></Frame>
+
+## Expressive scripts
+With a compatible expressive model, tags such as `[laughs]`, `[whispers]` and `[sighs]` can guide delivery. Place them close to the phrase they should affect. Punctuation and short paragraphs also help make a script easier to speak naturally.
+
+## Generate, listen and export
+<Steps>
+<Step title="Write the script">Read it aloud, expand ambiguous abbreviations and check names.</Step>
+<Step title="Set voice and delivery">Preview the voice, choose the model and adjust supported settings.</Step>
+<Step title="Review the estimate and generate">Longer scripts and model choice affect usage.</Step>
+<Step title="Listen and download">Check pronunciation and pacing, then download the result in the selected supported format or use narration in [Lip sync](/studio/lip-sync).</Step>
+</Steps>
+
+<AccordionGroup>
+<Accordion title="Is this the same as Iris speaking in chat?">No. Speech is a script-to-audio production workspace. [Voice chat](/chat/voice) is a live conversation.</Accordion>
+<Accordion title="Can I return to an earlier narration?">Open Speech History to find previous generations.</Accordion>
+<Accordion title="Does the ZDR badge also cover a lip-sync video?">No. Read the badge for each operation separately; Imagine animation is not covered by Speech's badge.</Accordion>
+</AccordionGroup>
+
+<Info>Speech requires Pro or Elite. The Speech workspace displays its own privacy badge; always review that badge and the credit estimate before generating.</Info>

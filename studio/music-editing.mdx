@@ -1,0 +1,50 @@
+---
+title: Edit songs
+description: Target lyrics or time ranges, insert precisely and apply a queue of saved changes.
+icon: sliders
+---
+
+<Frame><img src="https://chat.youniverse.ai/__l5e/assets-v1/074267d1-c0dd-4ba2-8221-041306318960/docs-studio-music-editing.jpg" alt="Glass audio timeline segments with precision markers and scissors" /></Frame>
+
+Open an existing track in the song editor or use **Music → Edit**. Work from the source song rather than creating an unrelated replacement.
+
+## Understand the source
+**Song Analysis** gives musical context such as BPM, key, genre, mood, energy and sections. Use that context to describe changes that fit the original. Analysis is guidance, not a substitute for listening.
+
+The edit version defaults to the music version saved with the source track. You can switch between compatible versions. Keep preview and apply on the same selected version when comparing results.
+
+## Choose the change
+| Change | Purpose |
+| --- | --- |
+| Inpaint a range | Replace a targeted section while keeping the surrounding track. |
+| Extend | Add more music before, after or at the selected insertion position. |
+| Restyle | Change the sound of a range or the whole song. |
+| Lyric targeting | Select the words that identify the section you want to change. |
+
+## Target lyrics or exact time
+Click a lyric line to select it; shift-click another line to select a range. When words do not identify the right position, use the timeline/time controls.
+
+Insertion supports the end, before a section, after a section or a specific timestamp. Check the chosen position before applying: “add a bridge” is a musical instruction, while its insertion point determines where it goes.
+
+<Frame><img src="https://chat.youniverse.ai/__l5e/assets-v1/fedaa882-e3ad-4997-9e29-0eb49ca0b38b/docs-studio-music.jpg" alt="Glass musical arrangement and notes representing a revised song" /></Frame>
+
+## Saved Edits
+Stage changes in **Saved Edits** when you want several modifications to the same source. Review the queue and apply the changes together instead of separately regenerating after every instruction.
+
+<Steps>
+<Step title="Select the source and range">Listen, inspect its sections and select the affected lyrics or time range.</Step>
+<Step title="Write the edit">State both what should change and what should remain: “Restyle this chorus with brighter percussion, preserving the vocal melody.”</Step>
+<Step title="Save the edit">Add the modification to Saved Edits. Repeat for other changes and inspect their order and targets.</Step>
+<Step title="Apply and compare">Apply the batch, listen to the result, and compare it with the original before using the new version.</Step>
+</Steps>
+
+## Playback while editing
+The persistent music player keeps the track accessible while you inspect controls and edits. Use it to compare transitions and verify that a change lands at the intended time.
+
+<AccordionGroup>
+<Accordion title="Can I restyle only a chorus?">Yes. Target its lyric or timeline range rather than choosing the entire song.</Accordion>
+<Accordion title="Can I insert at an exact second?">Use the specific-time insertion option and check the timestamp before applying.</Accordion>
+<Accordion title="Does saving an edit change the audio immediately?">No. Saved Edits stages instructions; applying them creates the edited result.</Accordion>
+</AccordionGroup>
+
+<Info>Edits use credits and Music is Non-ZDR. Keep sensitive information out of lyrics, prompts and reference audio.</Info>

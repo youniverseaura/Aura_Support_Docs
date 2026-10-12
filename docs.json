@@ -154,7 +154,12 @@
               "build/ai-studio",
               "studio/images",
               "studio/video",
-              "studio/lip-sync"
+              "studio/lip-sync",
+              "studio/music",
+              "studio/music-editing",
+              "studio/speech",
+              "studio/transcribe",
+              "studio/media"
             ]
           }
         ]
