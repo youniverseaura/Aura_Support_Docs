@@ -261,7 +261,8 @@
             "group": "Youniversity",
             "icon": "graduation-cap",
             "pages": [
-              "youniversity/index"
+              "youniversity/index",
+              "youniversity/prompting-certification"
             ]
           }
         ]
