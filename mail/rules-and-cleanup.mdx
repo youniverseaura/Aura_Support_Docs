@@ -1,0 +1,65 @@
+---
+title: "Rules and cleanup"
+description: "Sort incoming mail automatically and let Aura tidy your inbox every night."
+icon: "folder-open"
+---
+
+<Frame>
+  <img src="https://cdn.youniverse.ai/blog-hero/docs/mail-rules.jpg" alt="Glass envelopes sorted along tracks into folders" />
+</Frame>
+
+## Rules
+
+Rules act on mail the moment it arrives. Open **Settings → Rules** and build one in plain sentences: *when a message … then …*
+
+**When a message:**
+
+- is from
+- is addressed to
+- is Cc'd to
+- is addressed or Cc'd to
+- has subject containing
+- has list-id containing
+
+**Then:**
+
+- Move to Folder
+- Forward to an email address
+- Mark as Read
+- Move to Trash
+- Any of the above **and** mark as read
+
+<Tip>
+  Example: when a message *is from* `billing@vendor.com`, *Move to Folder and Mark as Read* → **Receipts**.
+</Tip>
+
+## Nightly cleanup
+
+<Frame>
+  <img src="https://cdn.youniverse.ai/blog-hero/docs/mail-cleanup.jpg" alt="A sparkle broom tidying a glass inbox under a moon" />
+</Frame>
+
+In **Settings → Cleanup**, Aura tidies your inbox once a night. Each cleanup can be edited or turned off:
+
+| Cleanup | Default |
+| --- | --- |
+| Clean up old promotions | Trashes unread promotions older than 3 months |
+| Clean up old updates | Trashes updates older than 1 year |
+| Archive old transactions | Archives receipts older than 1 year |
+
+Each card shows when it last ran.
+
+<Info>
+  Starred mail is always left where it is.
+</Info>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Do rules apply to mail I already have?">
+    Rules act on new mail as it arrives. Cleanup handles older mail each night.
+  </Accordion>
+  <Accordion title="Can I get trashed mail back?">
+    Yes — open the Trash folder and move it back.
+  </Accordion>
+</AccordionGroup>

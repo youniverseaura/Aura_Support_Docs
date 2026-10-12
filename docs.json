@@ -181,6 +181,22 @@
         ]
       },
       {
+        "tab": "Mail",
+        "groups": [
+          {
+            "group": "Aura Mail",
+            "icon": "envelope",
+            "pages": [
+              "mail/overview",
+              "mail/inbox-and-contacts",
+              "mail/compose-and-receipts",
+              "mail/rules-and-cleanup",
+              "mail/trust-and-blocking"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Use cases",
         "groups": [
           {
