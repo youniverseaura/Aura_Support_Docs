@@ -52,7 +52,7 @@ The screen is made of seven sections, listed below in the order you'll use them.
   </Card>
 
   <Card title="Who can do what" icon="users" href="#who-can-do-what">
-    What the app owner can do that others can't.
+    What you can do as the owner or an admin.
   </Card>
 </CardGroup>
 
@@ -64,8 +64,8 @@ The screen is made of seven sections, listed below in the order you'll use them.
 ## How it works
 
 1. **Publish your app.** Mobile builds need a live app — the phone app loads your published address.
-2. **Add signing keys** (owner only). Stores only accept updates signed with the same key, so you set this up once. → [Signing keys](#signing-keys)
-3. **Connect your store accounts** (owner only) if you want automatic uploads to Google Play or TestFlight. → [Store connections](#store-connections)
+2. **Add signing keys** (the app owner or an admin). Stores only accept updates signed with the same key, so you set this up once. → [Signing keys](#signing-keys)
+3. **Connect your store accounts** (the app owner or an admin) if you want automatic uploads to Google Play or TestFlight. → [Store connections](#store-connections)
 4. **Build**, download, and send to the store — all from the same screen. → [New build](#new-build)
 
 ## Getting ready {#getting-ready}
@@ -154,7 +154,9 @@ Removing a key or disconnecting a store asks you to type the app ID to confirm, 
 
 ## Who can do what {#who-can-do-what}
 
-Everyone on the project can see builds and the readiness checklist. Only the **app owner** can start builds, change signing keys, connect stores and edit app details.
+Everyone on the project can see builds and the readiness checklist. The **app owner** and **admins** can start builds, download them, send them to stores, add signing keys, connect store accounts and edit app details — a build an admin starts is still billed to the app owner.
+
+Only the **app owner** can remove a signing key or disconnect a store account. Those cut off your app's update history — without a backup of the key you can never update that app on the store again — so they need the person who owns the app.
 
 ## If something goes wrong {#if-something-goes-wrong}
 
