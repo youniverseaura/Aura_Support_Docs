@@ -58,7 +58,7 @@ The screen is made of seven sections, listed below in the order you'll use them.
 
 ## Which route are you on?
 
-- **Just try it on your phone.** Publish the app, build a test file, install it. No signing key, no store account needed. Start at [New build](#new-build).
+- **Try Android or the iPhone simulator.** Publish the app, then build a debug APK for an Android phone or an unsigned simulator preview for a Mac. Real-iPhone testing uses a signed build through TestFlight. Start at [New build](#new-build).
 - **Get it into a store.** Add a signing key, connect the store, build the store file, send it. Start at [Signing keys](#signing-keys), then [Store connections](#store-connections).
 
 ## How it works
@@ -164,7 +164,7 @@ Every message on this screen is written out in plain language. What they mean, a
 
 | Message | What happened | What to do |
 | --- | --- | --- |
-| Mobile apps need a paid build-service plan. | Mobile builds aren't on your plan. | Move to a plan that includes them. |
+| Mobile builds are temporarily unavailable. Please contact support. | Aura's build service is unavailable; this is not an upgrade you need to buy. | Contact support. |
 | Publish the app first — the mobile app opens your live app. | There's no live address to open yet. | Publish the app, then come back. |
 | Another mobile build is already running for this app. | Only one build can run at a time. | Wait for it, or cancel it if it's still waiting in line. |
 | Add a signing key for this platform first. | You picked a signed build type. | Save the key under [Signing keys](#signing-keys), or pick a test build type. |
@@ -182,3 +182,38 @@ Every message on this screen is written out in plain language. What they mean, a
 - [Publishing](/builder/publish) — get a live address to build against.
 - [Domains](/builder/domains) — put your app on your own web address.
 - [Data and history](/builder/data-history) — snapshots and restores for the app behind your mobile build.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="How do I create an app for both iPhone and Android?">
+    Publish your app, then open **Settings → Mobile apps**. Complete the signing and store connection steps for each platform and build each platform's store file. Use the platform overview to manage both; the step-by-step view focuses on one platform at a time. Android and iPhone have separate build and upload records.
+  </Accordion>
+  <Accordion title="Can I test on an iPhone without an Apple signing key?">
+    The unsigned iPhone option is a **Simulator preview** for Apple's simulator on a Mac, not a file you can install directly on an iPhone. To test on a real iPhone through TestFlight, create a signed App Store build and connect App Store Connect. Android's debug APK can be installed directly on an Android phone without a signing key. See [New build](#new-build).
+  </Accordion>
+  <Accordion title="Does sending a build to the store make it publicly available?">
+    No. Google Play uploads go to the internal testing track; Apple uploads go to TestFlight. A successful upload is not the same as a public store release. Review and complete the release steps in the relevant store console. See [Store uploads](#store-uploads).
+  </Accordion>
+  <Accordion title="Why is Android ready while the iPhone build is not?">
+    Each platform has its own build, signing and upload status. A ready Android build does not mean an iPhone build has run or finished. Check the iPhone build history, signing key and App Store connection separately; open its log if it failed.
+  </Accordion>
+  <Accordion title="Can an admin build and ship an app?">
+    Yes. Owners and admins can build, download, upload to stores, add signing keys, connect stores and edit app details. Builds an admin starts are billed to the owner. Only the owner can remove signing keys or disconnect store accounts. See [Who can do what](#who-can-do-what).
+  </Accordion>
+  <Accordion title="Do I need to rebuild for every content change?">
+    No. The native shell loads your published web app, so published content changes appear without rebuilding the shell. Changes to the icon, splash screen or native phone features are different: ask the AI Builder for those changes and prepare an updated mobile build.
+  </Accordion>
+  <Accordion title="Why does the first Google Play upload need to be manual?">
+    Google requires the first upload of a new app to be made in Play Console. Download the Play Store bundle (AAB), upload it there once, then use Aura's store upload controls for later builds. An Android debug APK is not the Play Store bundle.
+  </Accordion>
+  <Accordion title="Can I cancel a build, and how long can I download it?">
+    You can cancel while it is waiting in line, not after building begins. Build files are kept for about 30 days and generated download links work for 15 minutes. Return to the build record for a fresh link while the file is still available.
+  </Accordion>
+  <Accordion title="Do I need my own Codemagic account?">
+    No. Connecting your own account is optional. It uses your build account instead of the shared queue and skips the shared one-build-per-hour limit; Codemagic then bills you directly. See [Signing keys](#signing-keys).
+  </Accordion>
+  <Accordion title="Does “Mobile builds are temporarily unavailable” mean I need another plan?">
+    No. That message describes an operational issue with Aura's build service, not an upgrade you need to buy. Contact support. If the app is not yet published or lacks a signing key, follow the separate readiness messages instead.
+  </Accordion>
+</AccordionGroup>
