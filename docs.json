@@ -117,7 +117,8 @@
               "builder/publish",
               "builder/storage",
               "builder/domains",
-              "builder/mail"
+              "builder/mail",
+              "builder/mobile-apps"
             ]
           },
           {
