@@ -1,0 +1,81 @@
+---
+title: "Mobile apps"
+description: "Turn your published app into Android and iPhone apps, sign them, and ship them to Google Play and the App Store."
+icon: "mobile"
+sidebarTitle: "Mobile apps"
+---
+
+Open **Settings → Mobile apps** in your project. This screen turns your published app into real Android and iPhone apps. The mobile app opens your live app inside a native shell, so every publish updates it automatically — you never rebuild just to change content.
+
+<Note>
+  To change the icon, splash screen or phone features (camera, push notifications and the like), ask the AI Builder to "make it work as a mobile app".
+</Note>
+
+## How it works
+
+1. **Publish your app.** Mobile builds need a live app — the phone app loads your published address.
+2. **Add signing keys** (owner only). Stores only accept updates signed with the same key, so you set this up once.
+3. **Connect your store accounts** (owner only) if you want automatic uploads to Google Play or TestFlight.
+4. **Build**, download, and send to the store — all from the same screen.
+
+The **Getting ready** checklist at the top shows which of these steps are done: published app, Android signing key, Google Play connection, Apple signing key, App Store connection, and an optional own Codemagic account.
+
+## Starting a build
+
+In **New build**, pick a platform and what to build:
+
+| Platform | Build type | What it's for |
+| --- | --- | --- |
+| Android | Test file (debug APK) | Install straight on an Android phone to try it. No signing key needed. |
+| Android | Signed APK | A signed install file you can share outside the Play Store. |
+| Android | Play Store bundle (AAB) | What Google Play needs. Can be sent to Play's internal testing track. |
+| iPhone | Simulator preview | Runs in Apple's iPhone simulator on a Mac. No signing needed. |
+| iPhone | App Store build (IPA) | Signed build that can be sent to TestFlight. |
+
+Test builds need only a published app. Signed builds need the platform's signing key first — the Build button stays disabled until one is saved.
+
+Build time is billed by the minute (about 1.5–3 build-service credits per minute; a 13.3-credit hold is placed and released after the build). Builds are limited to **one per hour per app** unless you connect your own Codemagic account, in which case Codemagic runs the build and bills you directly instead of using build-service credits.
+
+## Builds list
+
+Every build appears under **Builds** with its status: Waiting in line (with your position), Building, Uploading, Store is processing, Ready, Failed, or Cancelled.
+
+- **Download** — grabs the finished file. Download links work for 15 minutes; build files are kept about 30 days.
+- **Log** — opens the full build log, and failed builds show the error plus a log excerpt inline.
+- **Send to store** — available on signed Play Store bundles and App Store builds.
+- **Cancel** — available while a build is still waiting in line; the credit hold is released. Builds that already started can't be cancelled.
+
+## Sending to the stores
+
+**Store uploads** lists everything sent to a store, with a link to open the store console.
+
+- **Google Play** uploads go to the internal testing track. Uploads are free, but Google requires an app's **very first upload to be done by hand** in the Play Console — the upload shows "First upload must be manual" with instructions. After that one manual upload, everything is automatic.
+- **App Store** uploads go to TestFlight. Upload time is billed like a build.
+- Store uploads are limited to **10 per day**.
+
+## App details
+
+- **Name under the icon** — the label shown on the phone's home screen (up to 30 characters). Leave it empty to use your app's name.
+- **Send to stores on every publish** — when on, each publish automatically starts a mobile build and uploads it to your connected stores. Needs at least one store connected. Builds are billed by the minute.
+
+## Signing keys
+
+Stores only accept updates signed with the same key, so treat these as permanent. Keys are stored by the build service; passwords are never shown again after you save them.
+
+**Android** — click **Create key** and optionally add your name, organization and country. Aura creates a key that lasts 25 years. The key file opens in a new tab and its alias and passwords are shown **exactly once** — copy them somewhere safe immediately. Without a backup of this key you can never update your app on Google Play again.
+
+**Apple (App Store Connect key)** — paste your .p8 key contents, Key ID (10 characters), Issuer ID and bundle ID from App Store Connect.
+
+**Codemagic (optional)** — connect your own Codemagic account with an API token to skip the shared queue and the one-build-per-hour limit. Codemagic bills you directly.
+
+Removing a key or disconnecting a store asks you to type the app ID to confirm, so it can't happen by accident.
+
+## Store connections
+
+**Google Play** — enter your package name (for example `com.example.app`) and paste a Google Play service account key (JSON). If the app isn't found in the Play Console yet, create it there first.
+
+**App Store** — uses the Apple signing key you saved above, so add that first. The Apple app ID is optional.
+
+## Who can do what
+
+Everyone on the project can see builds and the readiness checklist. Only the **app owner** can start builds, change signing keys, connect stores and edit app details.
