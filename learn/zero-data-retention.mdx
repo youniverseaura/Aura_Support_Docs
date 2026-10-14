@@ -67,4 +67,7 @@ Many companies promise not to train on your data but still **retain** it for wee
   <Accordion title="Does prompt caching break ZDR?">
     No. Caches are short-lived, held in memory, scoped to your conversation, and expire automatically. See [Prompt caching](/learn/prompt-caching).
   </Accordion>
+  <Accordion title="Is zero data retention the same as not training on my data?">
+    They address different things: training concerns how data is used to improve a model; retention concerns whether the provider keeps it. Aura's ZDR chat routes do not store prompts at the provider or use them for training. Optional non-ZDR operations are labeled; inspect the current operation's badge.
+  </Accordion>
 </AccordionGroup>
