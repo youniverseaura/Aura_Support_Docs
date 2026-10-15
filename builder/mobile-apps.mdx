@@ -1,0 +1,223 @@
+---
+title: "Mobile apps"
+description: "Turn your published app into Android and iPhone apps, sign them, and ship them to Google Play and the App Store."
+icon: "mobile"
+sidebarTitle: "Mobile apps"
+---
+
+<Frame>
+  <img
+    src="/images/mobile-apps-stores.jpg"
+    alt="Glass Google Play and Apple store icons beside a floating smartphone"
+  />
+</Frame>
+
+Open **Settings → Mobile apps** in your project. This screen turns your published app into real Android and iPhone apps. The mobile app opens your live app inside a native shell, so every publish updates it automatically — you never rebuild just to change content.
+
+<Note>
+  To change the icon, splash screen or phone features (camera, push notifications and the like), ask the AI Builder to "make it work as a mobile app".
+</Note>
+
+## Jump to a section
+
+The screen is made of seven sections, listed below in the order you'll use them. Pick one to jump straight to its explanation:
+
+<CardGroup cols={2}>
+  <Card title="Getting ready" icon="list-check" href="#getting-ready">
+    What's already done and what's still missing.
+  </Card>
+
+  <Card title="New build" icon="hammer" href="#new-build">
+    Pick a platform and a build type, then start it.
+  </Card>
+
+  <Card title="Builds" icon="download" href="#builds">
+    Watch a build, download the file, read its log.
+  </Card>
+
+  <Card title="Store uploads" icon="upload" href="#store-uploads">
+    Everything you've sent to Google Play or TestFlight.
+  </Card>
+
+  <Card title="App details" icon="sliders" href="#app-details">
+    The name under the icon and the send-to-stores switch.
+  </Card>
+
+  <Card title="Signing keys" icon="key" href="#signing-keys">
+    The keys that let stores accept your updates.
+  </Card>
+
+  <Card title="Store connections" icon="store" href="#store-connections">
+    Link your Google Play and App Store accounts.
+  </Card>
+
+  <Card title="Who can do what" icon="users" href="#who-can-do-what">
+    What you can do as the owner or an admin.
+  </Card>
+</CardGroup>
+
+## Which route are you on?
+
+- **Try Android or the iPhone simulator.** Publish the app, then build a debug APK for an Android phone or an unsigned simulator preview for a Mac. Real-iPhone testing uses a signed build through TestFlight. Start at [New build](#new-build).
+- **Get it into a store.** Add a signing key, connect the store, build the store file, send it. Start at [Signing keys](#signing-keys), then [Store connections](#store-connections).
+
+## How it works
+
+1. **Publish your app.** Mobile builds need a live app — the phone app loads your published address.
+2. **Add signing keys** (the app owner or an admin). Stores only accept updates signed with the same key, so you set this up once. → [Signing keys](#signing-keys)
+3. **Connect your store accounts** (the app owner or an admin) if you want automatic uploads to Google Play or TestFlight. → [Store connections](#store-connections)
+4. **Build**, download, and send to the store — all from the same screen. → [New build](#new-build)
+
+## Getting ready {#getting-ready}
+
+**What this is:** the checklist at the top of the screen. It tells you, at a glance, which of the four steps above are done and which are still open. Nothing here needs configuring — it just reads your app's state.
+
+| Item | What it means | How to tick it |
+| --- | --- | --- |
+| App is published | Your app has a live address the phone app can open. | Publish it — see [Publishing](/builder/publish). |
+| Android signing key | Aura holds a key that signs Android builds. | Add one under [Signing keys](#signing-keys). |
+| Google Play connected | Aura can upload to your Play Console account. | Connect it under [Store connections](#store-connections). |
+| Apple signing key | Aura holds the App Store Connect key that signs iPhone builds. | Add one under [Signing keys](#signing-keys). |
+| App Store connected | Aura can upload to TestFlight. | Connect it under [Store connections](#store-connections). |
+| Own Codemagic account (optional) | Your own build account runs the builds instead of the shared queue. | Add an API token under [Signing keys](#signing-keys). |
+
+Test builds need only a published app. Store releases need a signing key and a store connection.
+
+## New build {#new-build}
+
+**What this is:** the form where you start a build. You pick a platform, then what to build — the line under the boxes explains, in one sentence, what the file you're about to get is for.
+
+| Platform | Build type | What it's for |
+| --- | --- | --- |
+| Android | Test file (debug APK) | Install straight on an Android phone to try it. No signing key needed. |
+| Android | Signed APK | A signed install file you can share outside the Play Store. |
+| Android | Play Store bundle (AAB) | What Google Play needs. Can be sent to Play's internal testing track. |
+| iPhone | Simulator preview | Runs in Apple's iPhone simulator on a Mac. No signing needed. |
+| iPhone | App Store build (IPA) | Signed build that can be sent to TestFlight. |
+
+Test builds need only a published app. Signed builds need the platform's signing key first — the **Build** button stays disabled until one is saved.
+
+Build time is billed by the minute (about 1.5–3 build-service credits per minute; a 13.3-credit hold is placed and released after the build). Builds are limited to **one per hour per app** unless you connect your own Codemagic account, in which case Codemagic runs the build and bills you directly instead of using build-service credits.
+
+## Builds {#builds}
+
+**What this is:** the history of every mobile build for this app, newest first, with what happened to each one and what you can still do with it.
+
+Each row shows its status: Waiting in line (with your position), Building, Uploading, Store is processing, Ready, Failed, or Cancelled. The small line under the title gives the date, version, file size and how long the file is kept.
+
+- **Download** — grabs the finished file. Download links work for 15 minutes; build files are kept about 30 days.
+- **Log** — opens the full build log, and failed builds show the error plus a log excerpt inline.
+- **Send to store** — available on signed Play Store bundles and App Store builds.
+- **Cancel** — available while a build is still waiting in line; the credit hold is released. Builds that already started can't be cancelled.
+
+## Store uploads {#store-uploads}
+
+**What this is:** the record of everything you've sent to a store, with a link to open that store's console. This is where you check whether a build actually landed at Google or Apple, and what they did with it.
+
+<Frame>
+  <img
+    src="/images/mobile-apps-hero.jpg"
+    alt="Glass smartphone showing a glowing app interface"
+  />
+</Frame>
+
+- **Google Play** uploads go to the internal testing track. Uploads are free, but Google requires an app's **very first upload to be done by hand** in the Play Console — the upload shows "First upload must be manual" with instructions. After that one manual upload, everything is automatic.
+- **App Store** uploads go to TestFlight. Upload time is billed like a build.
+- Store uploads are limited to **10 per day**.
+
+## App details {#app-details}
+
+**What this is:** the two things people change most often — what the app is called on the phone, and whether stores get a new build automatically.
+
+- **Name under the icon** — the label shown on the phone's home screen (up to 30 characters). Leave it empty to use your app's name.
+- **Send to stores on every publish** — when on, each publish automatically starts a mobile build and uploads it to your connected stores. Needs at least one store connected. Builds are billed by the minute.
+
+## Signing keys {#signing-keys}
+
+**What this is:** the private keys that prove a build came from you. Stores only accept updates signed with the same key, so treat these as permanent. Keys are stored by the build service; passwords are never shown again after you save them.
+
+**Android — new app:** choose **Create new key**, then click **Create key** and optionally add your name, organization and country. Aura creates a key that lasts 25 years. The key file opens in a new tab and its alias and passwords are shown **exactly once** — copy them somewhere safe immediately.
+
+**Android — existing Google Play app:** choose **Use existing key** in Signing keys or the Android Step by step guide. Select your `.jks` or `.keystore` file (up to 64 KB), enter its **Key alias**, **Keystore password** and **Key password** (each password must be 6–200 characters), then click **Upload key**. Use the upload key registered for your existing app, not a newly generated key. Aura checks the file and credentials before saving; an incorrect password or alias is rejected. Keep your original file and passwords safe: uploaded keys cannot be downloaded again.
+
+The app owner or an admin can upload a key. An existing saved key cannot be overwritten: only the owner can remove it, with the exact app ID confirmation. Uploading goes directly to signing setup, not the AI Builder chat, and does not start a paid build or move your existing app automatically. Your Google Play package name and registered upload key must still match the existing app.
+
+**Apple (App Store Connect key)** — paste your .p8 key contents, Key ID (10 characters), Issuer ID and bundle ID from App Store Connect.
+
+**Codemagic (optional)** — connect your own Codemagic account with an API token to skip the shared queue and the one-build-per-hour limit. Codemagic bills you directly.
+
+Removing a key or disconnecting a store asks you to type the app ID to confirm, so it can't happen by accident.
+
+## Store connections {#store-connections}
+
+**What this is:** the link between Aura and your developer accounts, so a finished build can be uploaded for you instead of being sent by hand.
+
+**Google Play** — enter your package name (for example `com.example.app`) and paste a Google Play service account key (JSON). If the app isn't found in the Play Console yet, create it there first.
+
+**App Store** — uses the Apple signing key you saved above, so add that first. The Apple app ID is optional.
+
+## Who can do what {#who-can-do-what}
+
+Everyone on the project can see builds and the readiness checklist. The **app owner** and **admins** can start builds, download them, send them to stores, add signing keys, connect store accounts and edit app details — a build an admin starts is still billed to the app owner.
+
+Only the **app owner** can remove a signing key or disconnect a store account. Those cut off your app's update history — without a backup of the key you can never update that app on the store again — so they need the person who owns the app.
+
+## If something goes wrong {#if-something-goes-wrong}
+
+Every message on this screen is written out in plain language. What they mean, and what to do:
+
+| Message | What happened | What to do |
+| --- | --- | --- |
+| Mobile builds are temporarily unavailable. Please contact support. | Aura's build service is unavailable; this is not an upgrade you need to buy. | Contact support. |
+| Publish the app first — the mobile app opens your live app. | There's no live address to open yet. | Publish the app, then come back. |
+| Another mobile build is already running for this app. | Only one build can run at a time. | Wait for it, or cancel it if it's still waiting in line. |
+| Add a signing key for this platform first. | You picked a signed build type. | Save the key under [Signing keys](#signing-keys), or pick a test build type. |
+| One mobile build per hour per app. Try again later, or connect your own Codemagic account to skip the limit. | The hourly limit is used up. | Wait it out, or add your own Codemagic account. |
+| This build already started and can't be cancelled. | Cancelling only works while waiting in line. | Let it finish; download links work for 15 minutes. |
+| Only signed Play Store bundles or App Store builds can be sent to a store. | A test file isn't a store file. | Build a Play Store bundle (AAB) or App Store build (IPA). |
+| Connect the store for this platform first. | No store account is linked yet. | Use [Store connections](#store-connections). |
+| Store uploads are limited to 10 a day. | Today's uploads are used up. | Try again tomorrow. |
+| The key, alias or password didn't match. | An uploaded Android key didn't verify. | Re-upload the key file with the right alias and passwords. |
+| A key is already saved. Remove it first to replace it. | One key per platform at a time. | Remove the saved key first — and keep its backup. |
+| First upload must be manual | Google's rule for a brand-new app. | Download the AAB and upload it once in the Play Console. After that, uploads are automatic. |
+
+## Next steps
+
+- [Publishing](/builder/publish) — get a live address to build against.
+- [Domains](/builder/domains) — put your app on your own web address.
+- [Data and history](/builder/data-history) — snapshots and restores for the app behind your mobile build.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="How do I create an app for both iPhone and Android?">
+    Publish your app, then open **Settings → Mobile apps**. Complete the signing and store connection steps for each platform and build each platform's store file. Use the platform overview to manage both; the step-by-step view focuses on one platform at a time. Android and iPhone have separate build and upload records.
+  </Accordion>
+  <Accordion title="Can I test on an iPhone without an Apple signing key?">
+    The unsigned iPhone option is a **Simulator preview** for Apple's simulator on a Mac, not a file you can install directly on an iPhone. To test on a real iPhone through TestFlight, create a signed App Store build and connect App Store Connect. Android's debug APK can be installed directly on an Android phone without a signing key. See [New build](#new-build).
+  </Accordion>
+  <Accordion title="Does sending a build to the store make it publicly available?">
+    No. Google Play uploads go to the internal testing track; Apple uploads go to TestFlight. A successful upload is not the same as a public store release. Review and complete the release steps in the relevant store console. See [Store uploads](#store-uploads).
+  </Accordion>
+  <Accordion title="Why is Android ready while the iPhone build is not?">
+    Each platform has its own build, signing and upload status. A ready Android build does not mean an iPhone build has run or finished. Check the iPhone build history, signing key and App Store connection separately; open its log if it failed.
+  </Accordion>
+  <Accordion title="Can an admin build and ship an app?">
+    Yes. Owners and admins can build, download, upload to stores, add signing keys, connect stores and edit app details. Builds an admin starts are billed to the owner. Only the owner can remove signing keys or disconnect store accounts. See [Who can do what](#who-can-do-what).
+  </Accordion>
+  <Accordion title="Do I need to rebuild for every content change?">
+    No. The native shell loads your published web app, so published content changes appear without rebuilding the shell. Changes to the icon, splash screen or native phone features are different: ask the AI Builder for those changes and prepare an updated mobile build.
+  </Accordion>
+  <Accordion title="Why does the first Google Play upload need to be manual?">
+    Google requires the first upload of a new app to be made in Play Console. Download the Play Store bundle (AAB), upload it there once, then use Aura's store upload controls for later builds. An Android debug APK is not the Play Store bundle.
+  </Accordion>
+  <Accordion title="Can I cancel a build, and how long can I download it?">
+    You can cancel while it is waiting in line, not after building begins. Build files are kept for about 30 days and generated download links work for 15 minutes. Return to the build record for a fresh link while the file is still available.
+  </Accordion>
+  <Accordion title="Do I need my own Codemagic account?">
+    No. Connecting your own account is optional. It uses your build account instead of the shared queue and skips the shared one-build-per-hour limit; Codemagic then bills you directly. See [Signing keys](#signing-keys).
+  </Accordion>
+  <Accordion title="Does “Mobile builds are temporarily unavailable” mean I need another plan?">
+    No. That message describes an operational issue with Aura's build service, not an upgrade you need to buy. Contact support. If the app is not yet published or lacks a signing key, follow the separate readiness messages instead.
+  </Accordion>
+</AccordionGroup>

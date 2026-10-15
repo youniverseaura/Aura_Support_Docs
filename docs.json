@@ -117,7 +117,8 @@
               "builder/publish",
               "builder/storage",
               "builder/domains",
-              "builder/mail"
+              "builder/mail",
+              "builder/mobile-apps"
             ]
           },
           {
@@ -305,7 +306,6 @@
     "options": [
       "copy",
       "view",
-      "download-pdf",
       "assistant"
     ]
   },

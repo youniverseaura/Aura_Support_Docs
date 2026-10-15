@@ -32,4 +32,10 @@ Once a project has been published, **Auto Publish** is on by default: it ships y
   <Accordion title="Is publishing free?">
     Yes, publishing itself is always free.
   </Accordion>
+  <Accordion title="Do API-key changes require another AI build?">
+    Not just to make an existing live key change take effect: a republish is what updates the live environment. Aura starts it automatically when there are no unpublished code changes; otherwise it asks first. If the AI is waiting for requested keys, saving the last one can separately start a paid continuation. See [Setup & keys](/builder/setup-keys).
+  </Accordion>
+  <Accordion title="Why does publishing a key also publish my other changes?">
+    Publish deploys the current app version, not just an individual key. That is why Aura asks before republishing a key update when preview contains unpublished work. Review the preview before choosing to publish.
+  </Accordion>
 </AccordionGroup>

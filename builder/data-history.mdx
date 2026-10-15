@@ -36,4 +36,10 @@ Every build leaves a version. Each entry shows what changed; **View changes** op
   <Accordion title="Where do I find errors?">
     Settings → Logs. Copy the exact error into chat for the fastest fix.
   </Accordion>
+  <Accordion title="What is the difference between app versions and database backups?">
+    App versions cover code changes. Database backups cover records such as sign-ups and orders. Both appear in **App versions**, but they are not interchangeable: reverting a screen is different from replacing saved data. Select **Live** or **Preview** carefully before a database action.
+  </Accordion>
+  <Accordion title="Can I restore data to a specific time?">
+    Use the point-in-time controls in **App versions → Database backups** within the available 30-day window. Restoring replaces data saved after the chosen point and requires the owner to type the app ID. A backup is taken first, but review the selected environment and time before confirming.
+  </Accordion>
 </AccordionGroup>

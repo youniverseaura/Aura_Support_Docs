@@ -51,4 +51,7 @@ Any server action that isn't read-only is treated as risky and follows your [tru
   <Accordion title="Are servers shared between Agents?">
     Yes, unless you limit a server to specific Agents.
   </Accordion>
+  <Accordion title="What happens if a server connection stops working?">
+    Connections are checked at the start of a run. If sign-in is refused, the Agent pauses and asks you to reconnect. Reconnect the affected service rather than repeatedly rerunning a task whose connection is still broken.
+  </Accordion>
 </AccordionGroup>

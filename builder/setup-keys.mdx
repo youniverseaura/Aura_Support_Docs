@@ -39,4 +39,28 @@ When another service needs to notify your app — a payment succeeded, a form wa
   <Accordion title="Can I test a webhook?">
     Yes, the Webhooks tab sends an end-to-end test.
   </Accordion>
+  <Accordion title="What is an API key, and where do I get one?">
+    An API key is a credential a service gives your app so it can identify and authorize requests. Create it in that service's account settings or developer console, using the service's own instructions. Save the value in **Setup & keys → API keys**, not in builder chat. Use the exact key name shown in **Needs**.
+  </Accordion>
+  <Accordion title="What is the difference between an API key, a webhook and an MCP server?">
+    An API key authorizes your app to use a service. A webhook lets that service notify your app when an event happens. An [MCP server](/builder/mcp) gives the build agent documentation and tools while it writes your app. Saving one does not automatically configure the others.
+  </Accordion>
+  <Accordion title="When does a saved or deleted key take effect?">
+    Preview uses the change right away. For a published app, Aura starts a republish when preview has no unpublished code changes. If changes are waiting, it asks you to publish first because publishing will also make those changes live. Preview-only keys do not trigger a live republish. See [Publishing](/builder/publish).
+  </Accordion>
+  <Accordion title="Does the AI automatically continue after I save the keys it requested?">
+    Yes, when the latest builder reply is waiting for keys and you save the last missing key it requested. Aura checks on the server and sends: “I've saved the keys you asked for. Please carry on where you stopped.” You do not need to keep the builder open. Saving an unrelated key does not start a build, and continuation does not start while another build or publish is running.
+  </Accordion>
+  <Accordion title="Does automatically continuing the AI cost credits?">
+    Yes. Continuing starts a normal build through the usual credit checks and is billed to the app owner. Saving the key itself and republishing are separate from that AI work; a republish alone does not start a paid AI build.
+  </Accordion>
+  <Accordion title="Does saving a key automatically register my webhook?">
+    No. The external service needs the correct event destination, your app needs a receiving endpoint, and any required signing key must be available in the running environment. Use the webhook setup action where offered, or configure the endpoint at the provider, then run the **Webhooks** test. A saved key by itself is not proof that events are registered or verified.
+  </Accordion>
+  <Accordion title="What should I check if the webhook test fails?">
+    Read each test result rather than treating delivery alone as success. Check the service connection, the receiving address and the signing key in the environment being tested. If a live key is waiting for publication, finish that publish before retesting. Do not paste private keys into the error report or builder chat.
+  </Accordion>
+  <Accordion title="Do Android and Apple signing keys need a prompt to the AI?">
+    No. Save signing keys and store credentials in [Mobile apps](/builder/mobile-apps#signing-keys), not API keys or builder chat. The mobile build service uses them when signing and uploading. Ask the AI for changes to your app's icon, splash screen or phone features, not to publish signing credentials.
+  </Accordion>
 </AccordionGroup>
