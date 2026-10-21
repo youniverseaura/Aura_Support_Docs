@@ -26,7 +26,7 @@ Aura is built on a small set of carefully chosen infrastructure providers. Each 
 
 | Provider | What it does for Aura | What they store |
 | --- | --- | --- |
-| **Cloudflare** | Sits at the network edge: DNS, DDoS protection, web application firewall, caching and fast delivery worldwide | Request logs and cached pages at the edge — not your chat content |
+| **Cloudflare** | Sits at the network edge: DNS, DDoS protection, web application firewall, caching and fast delivery worldwide. Its Workers run Aura's custom edge infrastructure — branded links and gated media for built apps, per-page link previews, image processing, scheduled maintenance and incoming mail routing — and Cloudflare RealtimeKit powers Aura Meet's video and voice calls | Request logs and cached pages at the edge — not your chat content |
 | **Fly.io** | Hosts Aura's domain email server and provides the static outbound IP used for domain purchasing and registrar requests — not general app hosting | Mailbox messages and attachments, mail-server configuration and operational logs |
 | **Google Cloud** | Provides the cloud infrastructure for the Aura AI App Builder, including app building, hosting, databases and file storage | Built-app source code, app data and uploaded files needed to build and run your apps |
 | **OpenRouter** | Routes chat requests to AI models over zero-data-retention endpoints | Nothing on ZDR routes — requests are processed and discarded |
