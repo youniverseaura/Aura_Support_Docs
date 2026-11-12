@@ -45,7 +45,7 @@ Some services support both. When you pick one, Aura asks which you need before i
 - **Some events still need a key.** Some providers refuse to send events (webhooks) to an app that connected through a sign-in. **Stripe** is the main example: Stripe doesn't allow webhooks over a signed-in (OAuth) connection. For those, Aura asks for your API key once, creates the webhook for you, saves its signing secret and doesn't keep the key.
 - **It costs credits.** Connected-app accounts, actions and events are billed hourly to the app owner (or the project's payer) — live prices are in the **Connected apps** panel.
 - **Separate from chat.** Apps you connect in Aura chat or Work Mode don't connect your built app, and the reverse.
-- **Services can change.** If a provider changes its API or revokes a sign-in, your app may need to sign in again.
+- **Services can change.** If a provider changes its API or revokes a sign-in, your app may need to sign in again. You don't have to watch for this: Aura checks your live app's sign-ins around the clock and lets you know by push notification and email if one stops working, with the one-click fix.
 
 ### What the setup check looks at
 
@@ -55,6 +55,10 @@ The **Setup** checklist reads your app's code and compares it with what's actual
 - **API keys** — which keys the code still reads. A key drops off the list once a matching connected app is signed in _and_ the code no longer reads it. A connected app with missing actions or events never hides a key the code still needs.
 - **Events** — whether every event your code subscribes to is actually switched on for the signed-in account, and whether your app's event address answers and rejects unsigned requests. Missing subscriptions are switched on automatically.
 - **Events key** — for providers like Stripe that need an API key for events, whether that key and webhook are in place.
+
+### We'll let you know
+
+These checks don't only run when you open Setup. Aura re-checks every published app's sign-ins, events, webhooks and API keys on its own, all day. If something stays broken for more than a few minutes, you get a push notification and an email saying what broke and how to fix it — once per new problem, not over and over. Brief blips that fix themselves stay on the dashboard without interrupting you.
 
 **Setup & keys → Webhooks** lists your app's live event subscriptions per environment. Aura doesn't see the contents of those events — they go straight from the service to your app.
 
