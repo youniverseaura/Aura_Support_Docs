@@ -38,7 +38,8 @@
             "group": "Company",
             "icon": "building",
             "pages": [
-              "get-started/about"
+              "get-started/about",
+              "account/contact"
             ]
           }
         ]
@@ -278,8 +279,7 @@
               "account/plans",
               "account/privacy",
               "account/security",
-              "account/support",
-              "account/contact"
+              "account/support"
             ]
           }
         ]
@@ -294,7 +294,7 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:support@youniverse.ai"
+        "href": "/account/contact"
       }
     ],
     "primary": {
