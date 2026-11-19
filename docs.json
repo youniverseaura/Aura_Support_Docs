@@ -278,7 +278,8 @@
               "account/plans",
               "account/privacy",
               "account/security",
-              "account/support"
+              "account/support",
+              "account/contact"
             ]
           }
         ]
